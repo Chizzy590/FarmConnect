@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+     <link rel="stylesheet" href="https://cloudflare.com">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+   <header class="navbar-header">
+  <nav class="navbar">
+    
+    <!-- Left Section: Logo & Name -->
+    <a href="/pages/home.html" class="nav-logo">
+      <!-- Added class="logo-img" so we can size it using our CSS tokens -->
+      <img src="/icons/logo.svg" alt="Logo" class="logo-img">
+      <span class="nav-name">FarmConnect</span>
+    </a>
+
+    <!-- Center Section: Search Engine -->
+    <div class="nav-search-container">
+      <form class="nav-search-form" action="search-results.html" method="GET">
+        <input type="text" name="query" placeholder="Search For Text" class="search-input">
+        <button type="submit" class="search-submit-btn">
+          <img src="/icons/search.svg" alt="Search" class="search-img-icon">
+        </button>
+      </form>
+    </div>
+
+    <!-- Right Section: Cart & User Links -->
+    <div class="nav-actions">
+      <a href="/cart" class="nav-icon-link">
+        <!-- Replaced space with %20 just in case your file has a real space, but renaming the file to shopping-cart.svg is best practice! -->
+        <img src="/icons/shopping%20cart.svg" alt="Cart" class="nav-icon">
+      </a>
+      <a href="/profile" class="nav-icon-link">
+        <img src="/icons/user.svg" alt="Profile" class="nav-icon">
+      </a>
+    </div>
+
+  </nav>
+</header>
+</body>
+</html>
