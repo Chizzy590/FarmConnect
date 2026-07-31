@@ -121,27 +121,47 @@ section{
 .text-center{
     text-align:center
 }
-.btn{
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    height:48px;
-    padding:0 24px;
-    border-radius:var(--radius-sm);
-    transition:var(--transition);
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: var(--transition);
 }
-.btn-primary{
-    background:var(--primary);color:#fff;
+
+.btn-green {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
 }
-.btn-primary:hover{
-    background:var(--primary-hover);
+
+.btn-green:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
 }
-.btn-outline{
-    border:1px solid var(--primary);
-    color:var(--primary);
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
 }
-.btn-outline:hover{
-    background:var(--secondary);
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-full {
+    display: flex;
+    width: 100%;
+    text-align: center;
 }
 .card{
     background:#fff;
