@@ -267,10 +267,15 @@ input:focus,textarea:focus,select:focus{
     margin-bottom: 55px;
 }
 
+.logo img{
+    width:42px;
+    height:42px;
+}
+
 .logo{
     display:flex;
     align-items:center;
-    gap:.6rem;
+    gap:12px;
     font-size:2.2rem;
     font-weight:700;
     color:var(--primary);
@@ -441,4 +446,8 @@ input:focus,textarea:focus,select:focus{
 
 .social-btn i{
     font-size:1.4rem;
+}
+.social-icon{
+    width:24px;
+    height:24px;
 }

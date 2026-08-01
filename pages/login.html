@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <script src="../js/login.js" defer></script>
+    <script src="../js/auth.js" defer></script>
 </head>
 
 <body>
@@ -41,7 +41,7 @@
 
                     <span>Already have an account?</span>
 
-                    <a href="signup.html" class="btn btn-primary">
+                    <a href="signup.html" class="btn btn-green">
                         Sign up
                     </a>
 
@@ -73,16 +73,15 @@
                         <div class="form-group">
 
                             <div class="password-header">
-                                <label>Password</label>
+                                <label for="password">Password</label>
 
-                                <span class="hide-password">
+                                <span class="hide-password" id="togglePassword">
                                     <i class="fa-solid fa-eye-slash"></i>
                                     Hide
                                 </span>
-
                             </div>
 
-                            <input type="password">
+                            <input type="password" id="password">
 
                         </div>
 
@@ -95,19 +94,19 @@
 
                         </div>
 
-                        <button class="btn btn-primary login-btn">
+                        <button class="btn btn-green login-btn">
                             Log in
                         </button>
                         <div class="divider">
                             <span>OR</span>
                         </div>
 
-                        <button class="social-btn">
+                        <button type="button" class="social-btn">
                             <i class="fa-brands fa-google"></i>
                             Continue with Google
                         </button>
 
-                        <button class="social-btn">
+                        <button type="button" class="social-btn">
                             <i class="fa-brands fa-apple"></i>
                             Continue with Apple
                         </button>
