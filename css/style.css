@@ -1,4 +1,7 @@
 /* FarmConnect Design System  */
+@import url("footer.css");
+@import url("newsletter.css");
+@import url("packages.css");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 *{
     margin:0;padding:0;box-sizing:border-box;
@@ -32,7 +35,7 @@
     }
 :root{
     --primary:#008000;
-    --primary-hover:#007300;
+    --primary-hover:#002D00;
     --primary-dark:#006000;
     --secondary:#E6F2E6;
     --white:#fff;
