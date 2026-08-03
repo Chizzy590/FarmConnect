@@ -267,19 +267,23 @@ input:focus,textarea:focus,select:focus{
     margin-bottom: 55px;
 }
 
-.logo img{
-    width:42px;
-    height:42px;
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-size:2.2rem;
-    font-weight:700;
-    color:var(--primary);
+.logo-icon{
+    width: 70px;
+    height: auto;
+    max-width: none;
+    flex-shrink: 0;
 }
+
 
 .logo i{
     font-size:2rem;
@@ -452,4 +456,89 @@ input:focus,textarea:focus,select:focus{
 .social-icon{
     width:24px;
     height:24px;
+}
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media screen and (max-width: 768px) {
+
+    .auth-container{
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .image-side{
+        width: 100%;
+        flex: none;
+        height: 220px;
+    }
+
+    .image-side img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .form-side{
+        width: 100%;
+        padding: 24px;
+    }
+
+    .top-nav{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .login-link{
+        width: 100%;
+        justify-content: space-between;
+        font-size: 0.95rem;
+    }
+
+    .login-link .btn{
+        width: 120px;
+    }
+
+    .auth-content{
+        width: 100%;
+    }
+
+    .auth-card{
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+    border-radius: 24px;
+    text-align: center;
+}
+
+    .auth-card h1{
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: .8rem;
+    }
+
+    .subtitle{
+        max-width: 100%;
+        margin: 0 auto 2rem;
+    }
+
+    .form-group{
+        text-align: left;
+    }
+
+    .social-btn{
+        height: 56px;
+        font-size: 1rem;
+    }
+
+    .logo{
+        font-size: 1.7rem;
+    }
+
+    .logo-icon{
+        width: 48px;
+        height: auto;
+    }
 }
