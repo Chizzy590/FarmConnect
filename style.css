@@ -67,7 +67,7 @@ h1,h2,h3,h4,h5,h6{
     color:var(--text);line-height:1.2;
     font-weight:700;
     line-height:1.2;
-}
+} 
 h1{
     font-size:var(--fs-3xl);
 }
@@ -85,7 +85,7 @@ p{
     width:min(90%,var(--container-width));margin:auto;
 }
 section{
-    padding:5rem 0;
+    padding:5rem 0; 
 }
 .flex{
     display:flex
@@ -175,7 +175,8 @@ input:focus,textarea:focus,select:focus{
     grid-template-columns:repeat(2,1fr);
     gap:3rem;
     align-items:center;
-    min-height:80vh;}
+    min-height:80vh;
+}
 .footer{
     background:#000;
     color:#fff;

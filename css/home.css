@@ -42,12 +42,12 @@
 
 
 
- body{
+body{
         font-family: var(--font-family);
         color: var(--text);
         background: var(--white);
         overflow-x:hidden;
-     }
+    }
 
    
 .navbar-header {
@@ -89,6 +89,7 @@
 
 .nav-search-container {
     flex-grow: 1;
+   /* max-width: var(--container-width);*/
     max-width: 500px;
     margin: 0 var(--space-5);      
 }
@@ -152,3 +153,489 @@
     transform: scale(1.1); 
 }
 
+
+/* ==========================================================================
+   PARENT LAYOUT GRID: LOCKS SIDEBAR & HERO BANNER SIDE-BY-SIDE
+   ========================================================================== */
+.main-container {
+    display: grid;
+    grid-template-columns: 240px 1fr; 
+    gap: var(--space-5);
+    max-width: var(--container-width);
+    margin: var(--space-5) auto;
+    padding: 0 var(--space-4);
+    align-items: start;
+}
+
+/* ==========================================
+   LEFT SIDEBAR STYLE
+   ========================================== */
+.category-sidebar {
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--space-5) var(--space-4);
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-title {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-4);
+    color: var(--black);
+}
+
+.category-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-regular);
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.category-item i {
+    font-size: var(--fs-base);
+    color: #777;
+    width: 20px;
+    text-align: center;
+}
+
+.category-item:hover {
+    background-color: var(--secondary);
+    color: var(--primary-dark);
+    font-weight: var(--fw-semibold);
+}
+
+.category-item:hover i{
+    color: var(--primary);
+}
+
+
+/* ==========================================
+   RIGHT HERO BANNER DESIGN (MATCHING THE FIGMA IMAGE)
+   ========================================== */
+/* ==========================================================================
+   THE HERO BANNER DESIGN (MATCHING YOUR IMAGE PERFECTLY)
+   ========================================================================== */
+.hero-banner-container {
+    background-color: var(--secondary); /* Exact soft pastel mint green background from your image */
+    border-radius: var(--radius-lg); /* Smooth 20px corners */
+    min-height: 420px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-5) 8%;
+    position: relative;
+    overflow: hidden; /* Keeps the white background circles clipped inside */
+}
+
+/* THE WHITE DECORATIVE ACCENT RING IN THE TOP RIGHT CORNER */
+.hero-banner-container::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 300px;
+    height: 300px;
+    border: 30px solid var(--white); /* Semitransparent white thick ring */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* TEXT ELEMENT CONTENT PANEL */
+.hero-content {
+    max-width: 55%;
+    z-index: 2; /* Keeps text above the decorative circles */
+    position: relative;
+}
+
+.hero-main-title {
+    font-family: var(--font-family);
+    font-size: var(--fs-2xl); /* Heavy display title scale from your image */
+    font-weight: var(--fw-bold);
+    color: var(--text); 
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: var(--space-4);
+}
+
+.hero-subtext {
+    font-size: var(--fs-sm);
+    color: var(--text); /* Soft charcoal gray description text */
+    line-height: 1.8;
+    max-width: 480px;
+    margin-bottom: var(--space-5);
+}
+
+/* BRIGHT GREEN CALL TO ACTION BUTTON */
+.get-started-btn {
+    background-color: var(--primary); /* Vibrant bright green from your image */
+    color: var(--white);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    padding: 14px 36px;
+    border: none;
+    border-radius: var(--radius-lg); /* Fully pill-rounded corners */
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.15);
+    transition: var(--transition);
+}
+
+.get-started-btn:hover {
+    background-color: var(--primary-hover); /* Darker green hover effect */
+    transform: translateY(-1px);
+}
+
+/* SOLID DASH INDICATORS TRACK (BOTTOM LEFT) */
+.slider-indicators {
+    display: flex;
+    gap: 8px;
+    margin-top: 50px;
+}
+
+.slider-indicators .dot {
+    width: 45px; /* Rectangular dashes like your image */
+    height: 6px;
+    background-color: var(--gray); /* Muted gray-green for inactive dashes */
+    border-radius: 3px;
+    transition: var(--transition);
+}
+
+.slider-indicators .dot.active {
+    background-color: var(--primary); /* Active dash matches button green */
+}
+
+/* ==========================================
+   THE REALISTIC COW IMAGE PLACEMENT
+   ========================================== */
+.hero-image-wrapper {
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    height: 100%;
+    max-width: 45%;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-cow-graphic {
+    height: 100%; /* Spans full height of banner */
+    width: auto;
+    object-fit: contain;
+}
+
+
+@media (max-width: 992px) {
+ .main-container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+    .main-container { grid-template-columns: 1fr; }
+}
+
+/* ==========================================
+   CAROUSEL SLIDER BUTTON ARROWS
+   ========================================== */
+/*.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white circle */
+    /*color: #4A6B51; /* Muted green arrow color */
+    /*border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    font-size: 1.5rem;
+    transition: var(--transition);
+} 
+
+.slider-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.prev-arrow { left: var(--space-4); }
+.next-arrow { right: var(--space-4); }*/
+
+/* ==========================================
+   FEATURED PRODUCTS SECTION
+   ========================================== */
+.products-section {
+    max-width: var(--container-width);
+    margin: 40px auto;
+    padding: 0 var(--space-4);
+}
+
+/* Header row layout formatting */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+}
+
+.section-title {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    color: var(--black);
+}
+
+.see-all-link {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.see-all-link:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   PRODUCTS MATRIX CONTAINER (4 COLUMNS)
+   ========================================== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 identical side-by-side columns */
+    gap: var(--space-5);                  /* Perfect gap between layout tiles */
+}
+
+/* Card Block Outer Borders Setup */
+.product-card {
+    background-color: var(--white);
+    border-radius: var(--radius-md);     /* Smooth 12px card corners token */
+    box-shadow: var(--shadow-sm);        /* Light aesthetic card drop shadow aura */
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-4px);         /* Micro-lift response layout action */
+}
+
+/* Image bounding frames metrics */
+.card-img-wrapper {
+    width: 100%;
+    height: 180px;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops vegetables to fill out images boundary masks */
+}
+
+
+/* Card Metadata details block settings */
+.card-info {
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.product-category {
+    font-size: var(--fs-xs);
+    color: var(--primary); /* Small green category tracking labels */
+    font-weight: var(--fw-medium);
+}
+
+.product-name {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+/* Forces Price on left side, button on right side horizontally */
+.card-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+/* EDITED: Changed from flex-direction: column to a side-by-side flex row */
+.product-price {
+    display: flex;
+    align-items: center;     /* Aligns text flat on the exact same baseline level */
+    gap: 8px;                /* Creates a clean horizontal gap between the numbers */
+}
+
+/* EDITED: Optimized text token scale for a balanced look */
+.old-price {
+    font-size: var(--fs-xs); /* Uses your smaller 0.75rem token size */
+    color: var(--gray);
+    text-decoration: line-through; /* Draws a crisp line through the old numbers */
+    font-weight: var(--fw-regular);
+}
+
+.current-price {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    color: var(--text);
+}
+
+/* Isolated compact rectangular button pinned to bottom right */
+.add-to-cart-btn {
+    background-color: var(--primary); /* Bright brand green */
+    color: var(--white);
+    border: none;
+    font-family: var(--font-family);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    padding: 8px 18px;
+    border-radius: var(--radius-sm);  /* Snaps to sharp 8px corner values */
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Responsive constraints adjustments */
+@media (max-width: 992px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+    .products-grid { grid-template-columns: 1fr; }
+}
+
+.category-section{
+    max-width: var(--container-width);
+    margin: 40px auto;
+    padding: 0 var(--space-4);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+}
+
+.category-title {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    color: var(--black);
+}
+
+.right-arrow{
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.slider-indicator{
+    display: flex;
+    margin-top: -10px;
+    margin-bottom: var(--space-5);
+}
+/* ==========================================================================
+   NEW TOP CATEGORIES DESIGN (AS SEEN IN SCREENSHOT)
+   ========================================================================== */
+.top-categories-section {
+    max-width: var(--container-width); /* Stays within your 1200px layout limits */
+    margin: 50px auto;
+    padding: 0 var(--space-4);
+}
+
+.categories-header {
+    margin-bottom: var(--space-5);
+}
+
+.categories-main-title {
+    font-family: var(--font-family);
+    font-size: var(--fs-md);          /* Crisp, standard section heading font size */
+    font-weight: var(--fw-bold);
+    color: var(--black);
+}
+
+/* ==========================================
+   3-COLUMN IMAGE MATRIX GRID ENGINE
+   ========================================== */
+.categories-image-grid {
+    display: grid;
+    /* Forces exactly 3 columns side-by-side filling up the empty space evenly */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: var(--space-5); /* Employs your system spacing layout tokens */
+}
+
+.category-image-card {
+    position: relative; /* Crucial: Traps the text label overlays inside the card limits */
+    height: 450px;      /* Set vertical height matching the screenshot's aspect ratio */
+    border-radius: var(--radius-md); /* Smooth 12px card corners matching Figma cards */
+    overflow: hidden;   /* Cuts off any messy image borders that bleed past the curves */
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.category-image-card:hover {
+    transform: translateY(-4px); /* Add a tiny interactive lift feel on hover */
+}
+
+.cat-grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps images scaled beautifully without squishing or stretching */
+}
+
+/* THE CONTAINER POSITIONING THE TEXT ON TOP OF THE ARTWORK */
+.category-card-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: var(--space-4) var(--space-5);
+    
+    /* Adds a soft dark fade gradient backdrop so the text remains highly readable */
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    
+    z-index: 2;
+}
+
+/* The label font properties */
+.cat-card-name {
+    font-family: var(--font-family);
+    font-size: var(--fs-sm); /* Keep it light and elegant matching mockup scales */
+    font-weight: var(--fw-medium);
+    color: var(--white); /* White text color tracks flawlessly over image gradient layers */
+}
+
+/* Responsive collapse for tablets and mobile devices */
+@media (max-width: 768px) {
+    .categories-image-grid {
+        grid-template-columns: 1fr; /* Stacks image boxes vertically on narrow displays */
+    }
+    .category-image-card {
+        height: 250px; /* Slims vertical height profile scale on tiny phones */
+    }
+}
