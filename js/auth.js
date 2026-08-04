@@ -1,0 +1,14 @@
+const password = document.getElementById("password");
+const togglePassword = document.getElementById("togglePassword");
+
+togglePassword.addEventListener("click", function () {
+    if (password.type === "password") {
+        password.type = "text";
+        togglePassword.innerHTML =
+            '<i class="fa-solid fa-eye"></i> Show';
+    } else {
+        password.type = "password";
+        togglePassword.innerHTML =
+            '<i class="fa-solid fa-eye-slash"></i> Hide';
+    }
+});
