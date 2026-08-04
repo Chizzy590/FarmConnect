@@ -1,0 +1,98 @@
+#packages {
+  padding: 80px 60px;
+  background-color: #f7f8f6;   
+  text-align: left;             
+}
+
+#packages h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.packages-sub {
+  font-size: 14px;
+  color: var(--text-grey);
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.packages-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.package-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 28px;
+  width: 417px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.package-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.package-desc {
+  font-size: 13px;
+  color: var(--text-grey);
+  margin-bottom: 16px;
+  width:325px
+}
+
+.package-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;             
+  margin-bottom: 20px;
+}
+
+.package-price span {
+  font-size: 40px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
+}
+
+.package-features {
+  list-style: none;
+  margin-bottom: 24px;
+  flex: 1;                      
+}
+
+.package-features li {
+  font-size: 13px;
+  color: var(--text-grey);
+  padding: 7px 0;
+  position: relative;
+  padding-left: 20px;           
+}
+
+.package-features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.package-card .btn-green {
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px 0;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
