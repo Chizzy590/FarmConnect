@@ -89,8 +89,8 @@ body{
 
 .nav-search-container {
     flex-grow: 1;
-   /* max-width: var(--container-width);*/
-    max-width: 500px;
+    max-width: var(--container-width);
+    /*max-width: 500px;*/
     margin: 0 var(--space-5);      
 }
 
@@ -391,7 +391,8 @@ body{
 }
 
 .section-title {
-    font-size: var(--fs-lg);
+    font-family: var(--font-family);
+    font-size: var(--fs-md);
     font-weight: var(--fw-bold);
     color: var(--black);
 }
@@ -414,6 +415,7 @@ body{
    PRODUCTS MATRIX CONTAINER (4 COLUMNS)
    ========================================== */
 .products-grid {
+    cursor: pointer;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 identical side-by-side columns */
     gap: var(--space-5);                  /* Perfect gap between layout tiles */
@@ -496,7 +498,7 @@ body{
 
 .current-price {
     font-size: var(--fs-sm);
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-regular);
     color: var(--text);
 }
 
@@ -540,7 +542,8 @@ body{
 }
 
 .category-title {
-    font-size: var(--fs-lg);
+    font-family: var(--font-family);
+    font-size: var(--fs-md);
     font-weight: var(--fw-bold);
     color: var(--black);
 }
@@ -629,6 +632,13 @@ body{
     font-weight: var(--fw-medium);
     color: var(--white); /* White text color tracks flawlessly over image gradient layers */
 }
+.cat-card-sub{
+    font-family: var(--font-family);
+    font-size: var(--fs-sm); 
+    font-weight: var(--fw-light);
+    color: var(--white); 
+    margin-top: var(--space-4);
+}
 
 /* Responsive collapse for tablets and mobile devices */
 @media (max-width: 768px) {
@@ -637,5 +647,355 @@ body{
     }
     .category-image-card {
         height: 250px; /* Slims vertical height profile scale on tiny phones */
+    }
+}
+ /* ==========================================================================
+   FLASH SALE POSITIONING SYSTEM (LIVE TEXT OVER PRE-MADE IMAGE)
+   ========================================================================== */
+.flash-sale-section {
+    margin: 55px auto;  
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-5);
+}
+
+.sale-banner-image-box {
+    width: 100%;
+    height: 320px;                    
+    
+    /* LINK YOUR RECENT EXPORTED BACKGROUND IMAGE HERE */
+    background-image: url('/images/Banner\ Ads.svg'); 
+    background-size: cover;            /* Forces background to cleanly fill the entire container */
+    background-position: center;       /* Centers the background graphics layout */
+    background-repeat: no-repeat;
+    
+    border-radius: var(--radius-md);   /* Smooth 12px corners matching your design tokens */
+    box-shadow: var(--shadow-sm);
+    
+    /* THE MAGIC HOOK: Uses Flexbox to float all text inside to the right-hand wall */
+    display: flex;
+    justify-content: flex-end;         /* Pushes the content compartment completely to the right */
+    align-items: center;               /* Perfectly centers your text vertically (top to bottom) */
+}
+
+
+.sale-content-right {
+    width: 55%;                        /* Limits box width so text stays strictly on the right half */
+    padding: var(--space-5) 6% var(--space-5) 0; /* Generous right side padding offset padding */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;           /* Left-aligns your sentences natively */
+}
+
+.sale-tagline {
+    font-size: 0.75rem;
+    font-weight: var(--fw-semibold);
+    color: var(--text);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.sale-main-heading {
+    font-family: var(--font-family);
+    font-size: var(--fs-3xl);           /* Bold display text scale matching Figma (3rem) */
+    font-weight: var(--fw-black);        /* Extra heavy line thickness */
+    color: var(--black);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 2px;
+}
+
+.sale-subheading {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-regular);
+    color: #555555;
+    margin-bottom: var(--space-5);
+}
+
+/* Bright Green CTA Action Button Layout */
+.sale-action-btn {
+    background-color: var(--primary);    /* Bright signature green branding token (#008000) */
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    padding: 12px 28px;
+    border: none;
+    border-radius: var(--radius-lg);     /* Smooth round pill button curve (20px) */
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.15);
+    transition: var(--transition);
+}
+
+.sale-action-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+/* Responsive adjustment for tablets and small smartphones */
+@media (max-width: 768px) {
+    .sale-banner-image-box {
+        height: auto;
+        background-image: none;        /* Removes background on mobile if text overrides layout */
+        background-color: #f6faf6;     /* Fallback pastel background */
+        padding: var(--space-5);
+    }
+    .sale-content-right {
+        width: 100%;
+        padding: 0;
+        align-items: center;           /* Center aligns everything on small mobile screens */
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   RECENT PRODUCTS CARD MATRIX GRID
+   ========================================================================== */
+.recent-products-section {
+    max-width: var(--container-width); /* Restricts bounds to 1200px spacing width */
+    margin: 50px auto;
+    padding: 0 var(--space-4);
+    cursor: pointer;
+}
+
+.recent-header {
+    margin-bottom: var(--space-5);
+}
+
+.recent-main-title {
+    font-family: var(--font-family);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-bold);
+    color: var(--black);
+}
+
+
+
+/* ==========================================
+   4-COLUMN MATRIX GRID SYSTEM ENGINE
+   ========================================== */
+/* ==========================================================================
+   UPDATED: RESPONSIVE RECENT PRODUCTS CARD MATRIX GRID
+   ========================================================================== */
+.recent-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: var(--space-5);
+}
+
+.recent-product-card {
+    border-radius: var(--radius-md); /* Smooth 12px curves token */
+    overflow: hidden;                 /* Clips background image bleed limits cleanly */
+    box-shadow: var(--shadow-sm);
+    background-color: var(--white);
+    transition: var(--transition);
+    cursor: pointer;
+    
+    /* Guarantees proper card structure by forcing flex-direction column updates inside */
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-product-card:hover {
+    transform: translateY(-4px);      /* Interactive hover feedback rise translation */
+}
+
+.features-banner-image-box{                  
+    width: 100%;
+    height: 200px;                    
+    
+    /* LINK YOUR RECENT EXPORTED BACKGROUND IMAGE HERE */
+    background-image: url('/images/features-banner.svg'); 
+    background-size: contain;            /* Forces background to cleanly fill the entire container */
+    background-position: center;       /* Centers the background graphics layout */
+    background-repeat: no-repeat;
+    
+    border-radius: var(--radius-md);   /* Smooth 12px corners matching your design tokens */
+    box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   THE FIGMA-PERFECT TEAM BEZAO SITE FOOTER ENGINE
+   ========================================================================== */
+.site-footer {
+    background-color: #0b0c10; /* Pure deep charcoal black background from mockup graphics canvas */
+    color: var(--white);
+    padding: 70px 0 30px 0;
+    margin-top: -90px;
+    font-family: var(--font-family);
+    position: relative;
+}
+
+.footer-container {
+    display: grid;
+    /* Split parameters: Column 1 claims slightly more space width, matching design profiles */
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 50px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--space-5);
+    align-items: start;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Small, clear header text styles */
+.footer-heading {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: var(--space-4);
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   COLUMN 1: NEWSLETTER & MOTO BANNER BLOCK
+   ========================================== */
+.footer-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft muted gray boundary lines */
+    border-radius: var(--radius-sm);
+    background-color: rgba(255, 255, 255, 0.03);
+    overflow: hidden;
+    max-width: 380px;
+    width: 100%;
+}
+
+.footer-input {
+    flex: 1;
+    background: transparent;
+    padding: 12px 16px;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: var(--fs-xs);
+}
+
+.footer-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-green {
+    background-color: var(--primary); /* Bright theme green token (#008000) */
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-green:hover {
+    background-color: var(--primary-hover);
+}
+
+/* The exact, heavy title tagline fonts visible in your Figma canvas block */
+.footer-moto-text {
+    font-size: 22px;
+    font-weight: var(--fw-bold);
+    color: var(--white);
+    line-height: 1.3;
+    margin-top: 35px;
+    letter-spacing: -0.5px;
+}
+
+.footer-moto-text span {
+    color: #4cd137; /* Pops the lower sentence block parameters into bright neon vegetation green! */
+}
+
+/* ==========================================
+   COLUMN 2 & 3: CONTACT STRINGS AND SOCIAL LAYOUTS
+   ========================================== */
+.footer-contact-info, .footer-email-link {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7); /* Clean readable opacity font text rules */
+    line-height: 1.6;
+}
+
+.layout-branding-right-col {
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 4px;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 16px;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+    transform: translateY(-1px);
+}
+
+/* Position mapping anchors for the custom bright green sprout artwork graphics */
+.footer-branding-logo {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-sprout-img {
+    height: 60px; /* Safe proportional scale constraints */
+    width: auto;
+    object-fit: contain;
+}
+
+/* ==========================================
+   BOTTOM BASELINE TRACK: HORIZONTAL POLICY LINK PANEL
+   ========================================== */
+.footer-bottom-bar {
+    max-width: var(--container-width);
+    margin: 60px auto 0 auto;
+    padding: 25px var(--space-5) 0 var(--space-5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Exact thin inline break separator stroke row */
+    text-align: left;
+}
+
+.footer-legal-links {
+    display: flex;
+    flex-direction: row;
+    gap: 12px; /* Pulls clean tight padding intervals between words */
+    flex-wrap: wrap; /* Safely handles word wraps cleanly on tablet screen states */
+}
+
+.footer-legal-links a {
+    color: rgba(255, 255, 255, 0.5); /* Soft background contrast values */
+    text-decoration: none;
+    font-size: 11px;
+    transition: var(--transition);
+}
+
+/* Draws the subtle small white separator dividers block tracks between policy links */
+.footer-legal-links a:not(:last-child)::after {
+    content: '|';
+    margin-left: 12px;
+    color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+}
+
+.footer-legal-links a:hover {
+    color: var(--white);
+}
+
+/* Tablet columns reduction breakpoints tracks fallback profiles */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Stacks column sections into one single timeline on smaller devices */
+        gap: 40px;
+    }
+    .footer-bottom-bar {
+        margin-top: 40px;
     }
 }
