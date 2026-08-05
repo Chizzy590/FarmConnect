@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+   <header class="navbar-header">
+  <nav class="navbar">
+    
+    <!-- Left Section: Logo & Name -->
+    <a href="/pages/home.html" class="nav-logo">
+      <!-- Added class="logo-img" so we can size it using our CSS tokens -->
+      <img src="/icons/logo.svg" alt="Logo" class="logo-img">
+      <span class="nav-name">FarmConnect</span>
+    </a>
+
+    <!-- Center Section: Search Engine -->
+    <div class="nav-search-container">
+      <form class="nav-search-form" action="search-results.html" method="GET">
+        <input type="text" name="query" placeholder="Search For Text" class="search-input">
+        <button type="submit" class="search-submit-btn">
+          <img src="/icons/search.svg" alt="Search" class="search-img-icon">
+        </button>
+      </form>
+    </div>
+
+   
+    <div class="nav-actions">
+      <a href="/cart" class="nav-icon-link">
+    
+        <img src="/icons/shopping cart.svg" alt="Cart" class="nav-icon">
+      </a>
+      <a href="/profile" class="nav-icon-link">
+        <img src="/icons/user.svg" alt="Profile" class="nav-icon">
+      </a>
+    </div>
+
+  </nav>
+</header>
+
+  <main class="main-container">
+  
+  <!-- LEFT COLUMN: CATEGORY SIDEBAR -->
+  <aside class="category-sidebar">
+    <h3 class="sidebar-title">Category</h3>
+    <ul class="category-list">
+      <li class="category-item active"><i class="fa-solid fa-carrot"></i> Vegetables</li>
+      <li class="category-item"><i class="fa-solid fa-apple-whole"></i> Fruits</li>
+      <li class="category-item"><i class="fa-solid fa-wheat-awn"></i> Grains</li>
+      <li class="category-item"><i class="fa-solid fa-seedling"></i> Wheats</li>
+      <li class="category-item"><i class="fa-solid fa-cow"></i> Livestock</li>
+      <li class="category-item"><i class="fa-solid fa-jar"></i> Legumes</li>
+      <li class="category-item"><i class="fa-solid fa-leaf"></i> Plants</li>
+      <li class="category-item"><i class="fa-solid fa-bowl-rice"></i> Cereals</li>
+    </ul>
+  </aside> <!-- Fixed closing tag -->
+
+  <!-- RIGHT COLUMN: THE HERO BANNER SYSTEM -->
+  <section class="hero-banner-container">
+    <!-- Sliding Navigation Arrows -->
+  <!----  <button class="slider-arrow prev-arrow" aria-label="Previous Slide">‹</button>-->
+    
+    <!-- Text Elements Content Block -->
+    <div class="hero-content">
+      <h2 class="hero-main-title">Connecting Farmers to Buyers, One Harvest at a time.</h2>
+      <p class="hero-subtext">Discover fresh produce from trusted local farmers. Shop fruits, vegetables, grains, and livestock at fair prices while supporting local agriculture.</p>
+      <button class="get-started-btn">Get Started</button>
+      
+      <!-- Bottom Indicator Bars -->
+      <div class="slider-indicators"> 
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    
+    <!-- How the Cow Image sits on the right-hand side -->
+    <div class="hero-image-wrapper">
+      <!-- Use the transparent cow PNG image file you exported here -->
+      <img src="/icons/cow.svg" alt="FarmConnect Cow Art" class="hero-cow-graphic">
+    </div>
+
+   <!---- <button class="slider-arrow next-arrow" aria-label="Next Slide">›</button>--> 
+  </section>
+
+</main>
+
+<section class="products-section">
+  <!-- Section Header with Title and "See All" Link -->
+  <div class="section-header">
+    <h2 class="section-title">Featured Products</h2>
+    <a href="products.html" class="see-all-link">See All</a>
+  </div>
+   
+    <img src="/icons/Bars.svg" class="slider-indicator">
+  <!-- Products Grid Matrix Container -->
+ <div class="products-grid">
+    
+    <!-- Card 1: Fresh Carrots -->
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/carrots.svg" alt="Fresh Carrots" class="product-img">
+             </div>
+      <div class="card-info">
+        <span class="product-category">Vegetables</span>
+        <h3 class="product-name">Fresh Carrots</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦2,000</span>
+            <span class="current-price">₦1,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Corn -->
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/corn.svg" alt="Corn" class="product-img">
+       
+      </div>
+      <div class="card-info">
+        <span class="product-category">Grains</span>
+        <h3 class="product-name">Corn</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦2,500</span>
+            <span class="current-price">₦2,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Pineapple -->
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/pineapple.svg" alt="Pineapple" class="product-img">
+        
+      </div>
+      <div class="card-info">
+        <span class="product-category">Fruits</span>
+        <h3 class="product-name">Pineapple</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦3,500</span>
+            <span class="current-price">₦3,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Beans -->
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/beans.svg" alt="Beans" class="product-img">
+      
+      </div>
+      <div class="card-info">
+        <span class="product-category">Legumes</span>
+        <h3 class="product-name">Beans</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦10,000</span>
+            <span class="current-price">₦9,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+</div>
+  </div>
+</section>
+
+<section class="category-section">
+      <div class="category-header">
+    <h2 class="category-title">Top Category</h2>
+    <a href="#" class="right-arrow"><img src="/icons/arrow right.svg"></a>
+  </div>
+   
+    <img src="/icons/Bars.svg" class="slider-indicator">
+  <div class="categories-image-grid">
+    
+    <!-- Category Card 1: Corn -->
+    <div class="category-image-card">
+      <img src="/images/corn.svg" alt="Corn Category" class="cat-grid-img">
+      <div class="category-card-overlay">
+        <h3 class="cat-card-name">Corn</h3>
+        <p class="cat-card-sub">108 Produce</p>
+      </div>
+    </div>
+
+    <!-- Category Card 2: Rice -->
+    <div class="category-image-card">
+      <img src="/images/rice.svg" alt="Rice Category" class="cat-grid-img">
+      <div class="category-card-overlay">
+        <h3 class="cat-card-name">Rice</h3>
+        <p class="cat-card-sub">208 Produce</p>
+      </div>
+    </div>
+
+    <!-- Category Card 3: Beans -->
+    <div class="category-image-card">
+      <img src="/images/millet.svg" alt="Beans Category" class="cat-grid-img">
+      <div class="category-card-overlay">
+        <h3 class="cat-card-name">Millet</h3>
+        <p class="cat-card-sub">58 Produce</p>
+      </div>
+    </div>
+
+  </div>
+ </section>
+
+ <section class="flash-sale-section">
+  <!-- The main box that loads your pre-made background picture -->
+  <div class="sale-banner-image-box">
+    
+    <!-- This container pushes and aligns all text to the right side -->
+    <div class="sale-content-right">
+      <span class="sale-tagline">FARMCONNECT BIGGEST SLASH SALES</span>
+      <h2 class="sale-main-heading">20% Discount</h2>
+      <p class="sale-subheading">on every FARM produce</p>
+      <button class="sale-action-btn">Get Started</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="recent-products-section">
+  <!-- Component Title Header -->
+  <div class="recent-header">
+    <h2 class="recent-main-title">Recent Products</h2>
+  </div>
+
+   <img src="/icons/Bars.svg" class="slider-indicator">
+  <!-- 4-Column Balanced Grid Matrix -->
+  <div class="recent-products-grid">
+    
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/plaintain.svg" alt="Plantain" class="product-img">
+        
+      </div>
+      <div class="card-info">
+        <span class="product-category">Fruits</span>
+        <h3 class="product-name">Plantain</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦6,000</span>
+            <span class="current-price">₦5,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+ <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/coconut.svg" alt="Coconut" class="product-img">
+        
+      </div>
+      <div class="card-info">
+        <span class="product-category">Fruits</span>
+        <h3 class="product-name">Coconut</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦2,000</span>
+            <span class="current-price">₦1,500</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/sorghum.svg" alt="Sorghum" class="product-img">
+        
+      </div>
+      <div class="card-info">
+        <span class="product-category">Cereals</span>
+        <h3 class="product-name">Sorghum</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦4,000</span>
+            <span class="current-price">₦3,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/Tomatoes.svg" alt="Tomatoes" class="product-img">
+        
+      </div>
+      <div class="card-info">
+        <span class="product-category">Vegetables</span>
+        <h3 class="product-name">Tomatoes</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦10,000</span>
+            <span class="current-price">₦9,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="recent-products-section">
+
+  <!-- 4-Column Balanced Grid Matrix -->
+  <div class="recent-products-grid">
+    
+     <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/vegie.svg" alt="Vegetables" class="product-img">
+        
+      </div>
+      <div class="card-info">
+        <span class="product-category">Vegetables</span>
+        <h3 class="product-name">Green Vegetables</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦3,000</span>
+            <span class="current-price">₦2,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+   <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/soybean.svg" alt="Soybean" class="product-img">
+        
+      </div>
+      <div class="card-info">
+        <span class="product-category">Legume</span>
+        <h3 class="product-name">Soybean</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦45,000</span>
+            <span class="current-price">₦40,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/potatoes.svg" alt="potatoes" class="product-img">
+        
+      </div>
+      <div class="card-info">
+        <span class="product-category">Plants</span>
+        <h3 class="product-name">Potatoes</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦15,000</span>
+            <span class="current-price">₦14,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/cassava.svg" alt="cassava" class="product-img">
+        
+      </div>
+      <div class="card-info">
+        <span class="product-category">Cassava</span>
+        <h3 class="product-name">Cassava</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price">₦5,000</span>
+            <span class="current-price">₦2,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+</section>
+ <section class="flash-sale-section">
+  <!-- The main box that loads your pre-made background picture -->
+  <div class="features-banner-image-box">
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Column 1: Stay In Touch & Newsletter -->
+    <div class="footer-col newsletter-col">
+      <h4 class="footer-heading">Stay In Touch</h4>
+      
+      <form class="footer-form" action="/subscribe" method="POST">
+        <!-- Replaced standard input styling parameters to track your exact mockup border outline -->
+        <input type="email" placeholder="Enter Email Address" required class="footer-input">
+        <button type="submit" class="btn-green">Subscribe</button>
+      </form>
+
+      <!-- The exact prominent display brand tagline on your Figma mockup canvas -->
+      <h3 class="footer-moto-text">
+        We believe in <br>
+        <span>change from <br>
+        the ground up</span>
+      </h3>
+    </div>
+
+    <!-- Column 2: Contact Details -->
+    <div class="footer-col">
+      <h4 class="footer-heading">Contact Us</h4>
+      <!-- Placed the exact phone number and street address strings from your mockup screen layout -->
+      <p class="footer-contact-info">(+234) 080 774 5514</p>
+      <p class="footer-contact-info">8735, Achala Layout, Nnewi, Lagos.</p>
+    </div>
+
+    <!-- Column 3: Follow Channels & Big Vector Branding Sprout -->
+    <div class="footer-col layout-branding-right-col">
+      <h4 class="footer-heading">Follow Us</h4>
+      
+      <!-- Horizontal Social Interface Core Links -->
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook Link"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram Link"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter Link"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn Link"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+
+      <!-- Live raw template placeholder string matching your mockup layout specifications -->
+      <p class="footer-email-link">farmconnect420@personal.com</p>
+
+      <!-- The beautiful signature brand sprout logo tracking directly over the right wall block -->
+      <!-- Replace the source file path below with your exported green sprout graphic shape! -->
+      <div class="footer-branding-logo">
+        <img src="/images/Leaf.svg" alt="FarmConnect Sprout Graphics Logo" class="footer-sprout-img">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Floor Track Layout containing all secondary horizontal legal strings inline -->
+  <div class="footer-bottom-bar">
+    <div class="footer-legal-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Policy Cookies</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Financial Plan</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html> 
