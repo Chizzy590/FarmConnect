@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="signup.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="overlay">
+
+    <div class="signup-card">
+
+        <div class="logo"></div>
+
+        <h1>Sign Up for Free</h1>
+
+
+        <button class="social-btn facebook">
+            <i class="fab fa-facebook"></i>
+            Sign up with Facebook
+        </button>
+
+        <button class="social-btn google">
+            <i class="fab fa-google"></i>
+            Sign up with Google
+        </button>
+
+        <button class="social-btn twitter">
+            <i class="fab fa-twitter"></i>
+            Sign up with Twitter
+        </button>
+
+        <div class="divider">
+            <span></span>
+            <p>OR</p>
+            <span></span>
+        </div>
+
+        <h3>Sign up with your email address</h3>
+
+
+        <form id="signupForm">
+
+            <div class="input-group">
+                <label>Profile name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your profile name"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email address"
+                    required>
+            </div>
+
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required>
+
+                    <button
+                        type="button"
+                        id="togglePassword">
+
+                        <i class="fa-solid fa-eye"></i>
+                        <span>Hide</span>
+
+                    </button>
+
+                </div>
+
+                <small>
+                    Use 8 or more characters with a mix of letters,
+                    numbers & symbols.
+                </small>
+
+            </div>
+
+            <div class="category">
+
+                <label>
+                    What's your Category?
+                    <span>(required)</span>
+                </label>
+
+                <div class="radio-group">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Individual"
+                            required>
+                        Individual
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Company">
+                        Company
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="category"
+                            value="Corporation">
+                        Corporation
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="dob">
+
+                <label>What's your date of birth?</label>
+
+                <div class="dob-select">
+
+                    <select id="month">
+                        <option>Month</option>
+                    </select>
+
+                    <select id="day">
+                        <option>Date</option>
+                    </select>
+
+                    <select id="year">
+                        <option>Year</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="check">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        checked>
+
+                    Share my registration data with our
+                    content providers for marketing purposes.
+
+                </label>
+
+            </div>
+
+
+            <p class="terms">
+
+                By creating an account, you agree to the
+
+                <a href="#">Terms of use</a>
+
+                and
+
+                <a href="#">Privacy Policy</a>
+
+            </p>
+
+
+            <div class="captcha">
+
+                <div class="captcha-box">
+
+                    <input
+                        type="checkbox">
+
+                    <span>I'm not a robot</span>
+
+                </div>
+
+                <div class="captcha-logo">
+                    reCAPTCHA
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="signup-btn">
+
+                Sign up
+
+            </button>
+
+        </form>
+
+        <p class="login">
+
+            Already have an account?
+
+            <a href="#">
+                Log in
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+<script src="signup.js"></script>
+
+</body>
+</html>
