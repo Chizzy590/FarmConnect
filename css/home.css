@@ -154,9 +154,7 @@ body{
 }
 
 
-/* ==========================================================================
-   PARENT LAYOUT GRID: LOCKS SIDEBAR & HERO BANNER SIDE-BY-SIDE
-   ========================================================================== */
+
 .main-container {
     display: grid;
     grid-template-columns: 240px 1fr; 
@@ -167,9 +165,7 @@ body{
     align-items: start;
 }
 
-/* ==========================================
-   LEFT SIDEBAR STYLE
-   ========================================== */
+
 .category-sidebar {
     background-color: var(--white);
     border-radius: var(--radius-md);
@@ -221,12 +217,7 @@ body{
 }
 
 
-/* ==========================================
-   RIGHT HERO BANNER DESIGN (MATCHING THE FIGMA IMAGE)
-   ========================================== */
-/* ==========================================================================
-   THE HERO BANNER DESIGN (MATCHING YOUR IMAGE PERFECTLY)
-   ========================================================================== */
+
 .hero-banner-container {
     background-color: var(--secondary); /* Exact soft pastel mint green background from your image */
     border-radius: var(--radius-lg); /* Smooth 20px corners */
@@ -240,7 +231,6 @@ body{
     overflow: hidden; /* Keeps the white background circles clipped inside */
 }
 
-/* THE WHITE DECORATIVE ACCENT RING IN THE TOP RIGHT CORNER */
 .hero-banner-container::before {
     content: '';
     position: absolute;
@@ -253,7 +243,7 @@ body{
     z-index: 1;
 }
 
-/* TEXT ELEMENT CONTENT PANEL */
+
 .hero-content {
     max-width: 55%;
     z-index: 2; /* Keeps text above the decorative circles */
@@ -278,7 +268,7 @@ body{
     margin-bottom: var(--space-5);
 }
 
-/* BRIGHT GREEN CALL TO ACTION BUTTON */
+
 .get-started-btn {
     background-color: var(--primary); /* Vibrant bright green from your image */
     color: var(--white);
@@ -316,9 +306,6 @@ body{
     background-color: var(--primary); /* Active dash matches button green */
 }
 
-/* ==========================================
-   THE REALISTIC COW IMAGE PLACEMENT
-   ========================================== */
 .hero-image-wrapper {
     position: absolute;
     right: 2%;
@@ -373,16 +360,13 @@ body{
 .prev-arrow { left: var(--space-4); }
 .next-arrow { right: var(--space-4); }*/
 
-/* ==========================================
-   FEATURED PRODUCTS SECTION
-   ========================================== */
 .products-section {
     max-width: var(--container-width);
     margin: 40px auto;
     padding: 0 var(--space-4);
 }
 
-/* Header row layout formatting */
+
 .section-header {
     display: flex;
     align-items: center;
@@ -411,9 +395,7 @@ body{
 }
 
 
-/* ==========================================
-   PRODUCTS MATRIX CONTAINER (4 COLUMNS)
-   ========================================== */
+
 .products-grid {
     cursor: pointer;
     display: grid;
@@ -424,15 +406,16 @@ body{
 /* Card Block Outer Borders Setup */
 .product-card {
     background-color: var(--white);
-    border-radius: var(--radius-md);     /* Smooth 12px card corners token */
-    box-shadow: var(--shadow-sm);        /* Light aesthetic card drop shadow aura */
+    border-radius: var(--radius-md);    
+    box-shadow: var(--shadow-sm);        
     overflow: hidden;
     transition: var(--transition);
 }
 
 .product-card:hover {
-    transform: translateY(-4px);         /* Micro-lift response layout action */
+    transform: translateY(-4px); 
 }
+
 
 /* Image bounding frames metrics */
 .card-img-wrapper {
@@ -452,7 +435,7 @@ body{
 }
 
 
-/* Card Metadata details block settings */
+
 .card-info {
     padding: var(--space-4);
     display: flex;
@@ -473,7 +456,7 @@ body{
     margin-bottom: 4px;
 }
 
-/* Forces Price on left side, button on right side horizontally */
+
 .card-bottom-row {
     display: flex;
     align-items: center;
@@ -481,18 +464,18 @@ body{
     margin-top: 4px;
 }
 
-/* EDITED: Changed from flex-direction: column to a side-by-side flex row */
+
 .product-price {
     display: flex;
-    align-items: center;     /* Aligns text flat on the exact same baseline level */
-    gap: 8px;                /* Creates a clean horizontal gap between the numbers */
+    align-items: center;    
+    gap: 8px;                
 }
 
-/* EDITED: Optimized text token scale for a balanced look */
+
 .old-price {
-    font-size: var(--fs-xs); /* Uses your smaller 0.75rem token size */
+    font-size: var(--fs-xs);
     color: var(--gray);
-    text-decoration: line-through; /* Draws a crisp line through the old numbers */
+    text-decoration: line-through; 
     font-weight: var(--fw-regular);
 }
 
@@ -502,7 +485,7 @@ body{
     color: var(--text);
 }
 
-/* Isolated compact rectangular button pinned to bottom right */
+
 .add-to-cart-btn {
     background-color: var(--primary); /* Bright brand green */
     color: var(--white);
@@ -561,9 +544,7 @@ body{
     margin-top: -10px;
     margin-bottom: var(--space-5);
 }
-/* ==========================================================================
-   NEW TOP CATEGORIES DESIGN (AS SEEN IN SCREENSHOT)
-   ========================================================================== */
+
 .top-categories-section {
     max-width: var(--container-width); /* Stays within your 1200px layout limits */
     margin: 50px auto;
@@ -581,9 +562,7 @@ body{
     color: var(--black);
 }
 
-/* ==========================================
-   3-COLUMN IMAGE MATRIX GRID ENGINE
-   ========================================== */
+
 .categories-image-grid {
     display: grid;
     /* Forces exactly 3 columns side-by-side filling up the empty space evenly */
@@ -592,17 +571,17 @@ body{
 }
 
 .category-image-card {
-    position: relative; /* Crucial: Traps the text label overlays inside the card limits */
-    height: 450px;      /* Set vertical height matching the screenshot's aspect ratio */
-    border-radius: var(--radius-md); /* Smooth 12px card corners matching Figma cards */
-    overflow: hidden;   /* Cuts off any messy image borders that bleed past the curves */
+    position: relative;  
+    height: 450px;     
+    border-radius: var(--radius-md); 
+    overflow: hidden;
     box-shadow: var(--shadow-sm);
     cursor: pointer;
     transition: var(--transition);
 }
 
 .category-image-card:hover {
-    transform: translateY(-4px); /* Add a tiny interactive lift feel on hover */
+    transform: translateY(-4px); 
 }
 
 .cat-grid-img {
@@ -611,15 +590,13 @@ body{
     object-fit: cover; /* Keeps images scaled beautifully without squishing or stretching */
 }
 
-/* THE CONTAINER POSITIONING THE TEXT ON TOP OF THE ARTWORK */
+
 .category-card-overlay {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     padding: var(--space-4) var(--space-5);
-    
-    /* Adds a soft dark fade gradient backdrop so the text remains highly readable */
     background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
     
     z-index: 2;
@@ -747,9 +724,7 @@ body{
     }
 }
 
-/* ==========================================================================
-   RECENT PRODUCTS CARD MATRIX GRID
-   ========================================================================== */
+
 .recent-products-section {
     max-width: var(--container-width); /* Restricts bounds to 1200px spacing width */
     margin: 50px auto;
@@ -770,12 +745,8 @@ body{
 
 
 
-/* ==========================================
-   4-COLUMN MATRIX GRID SYSTEM ENGINE
-   ========================================== */
-/* ==========================================================================
-   UPDATED: RESPONSIVE RECENT PRODUCTS CARD MATRIX GRID
-   ========================================================================== */
+
+  
 .recent-products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
@@ -789,8 +760,6 @@ body{
     background-color: var(--white);
     transition: var(--transition);
     cursor: pointer;
-    
-    /* Guarantees proper card structure by forcing flex-direction column updates inside */
     display: flex;
     flex-direction: column;
 }
@@ -802,8 +771,6 @@ body{
 .features-banner-image-box{                  
     width: 100%;
     height: 200px;                    
-    
-    /* LINK YOUR RECENT EXPORTED BACKGROUND IMAGE HERE */
     background-image: url('/images/features-banner.svg'); 
     background-size: contain;            /* Forces background to cleanly fill the entire container */
     background-position: center;       /* Centers the background graphics layout */
@@ -813,9 +780,6 @@ body{
     box-shadow: var(--shadow-sm);
 }
 
-/* ==========================================================================
-   THE FIGMA-PERFECT TEAM BEZAO SITE FOOTER ENGINE
-   ========================================================================== */
 .site-footer {
     background-color: #0b0c10; /* Pure deep charcoal black background from mockup graphics canvas */
     color: var(--white);
@@ -827,7 +791,6 @@ body{
 
 .footer-container {
     display: grid;
-    /* Split parameters: Column 1 claims slightly more space width, matching design profiles */
     grid-template-columns: 1.3fr 1fr 1fr;
     gap: 50px;
     max-width: var(--container-width);
@@ -842,7 +805,7 @@ body{
     gap: 16px;
 }
 
-/* Small, clear header text styles */
+
 .footer-heading {
     font-size: 14px;
     font-weight: 500;
@@ -851,9 +814,7 @@ body{
     letter-spacing: 0.5px;
 }
 
-/* ==========================================
-   COLUMN 1: NEWSLETTER & MOTO BANNER BLOCK
-   ========================================== */
+
 .footer-form {
     display: flex;
     align-items: center;
@@ -908,9 +869,7 @@ body{
     color: #4cd137; /* Pops the lower sentence block parameters into bright neon vegetation green! */
 }
 
-/* ==========================================
-   COLUMN 2 & 3: CONTACT STRINGS AND SOCIAL LAYOUTS
-   ========================================== */
+
 .footer-contact-info, .footer-email-link {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.7); /* Clean readable opacity font text rules */
@@ -939,7 +898,7 @@ body{
     transform: translateY(-1px);
 }
 
-/* Position mapping anchors for the custom bright green sprout artwork graphics */
+
 .footer-branding-logo {
     margin-top: 25px;
     display: flex;
@@ -947,14 +906,12 @@ body{
 }
 
 .footer-sprout-img {
-    height: 60px; /* Safe proportional scale constraints */
+    height: 60px; 
     width: auto;
     object-fit: contain;
 }
 
-/* ==========================================
-   BOTTOM BASELINE TRACK: HORIZONTAL POLICY LINK PANEL
-   ========================================== */
+
 .footer-bottom-bar {
     max-width: var(--container-width);
     margin: 60px auto 0 auto;
@@ -966,8 +923,8 @@ body{
 .footer-legal-links {
     display: flex;
     flex-direction: row;
-    gap: 12px; /* Pulls clean tight padding intervals between words */
-    flex-wrap: wrap; /* Safely handles word wraps cleanly on tablet screen states */
+    gap: 12px; 
+    flex-wrap: wrap; 
 }
 
 .footer-legal-links a {
@@ -977,7 +934,7 @@ body{
     transition: var(--transition);
 }
 
-/* Draws the subtle small white separator dividers block tracks between policy links */
+
 .footer-legal-links a:not(:last-child)::after {
     content: '|';
     margin-left: 12px;
