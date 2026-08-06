@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+    <header class="navbar-header">
+  <nav class="navbar">
+    
+    <!-- Left Section: Logo & Name -->
+    <a href="/pages/home.html" class="nav-logo">
+      
+      <img src="/icons/logo.svg" alt="Logo" class="logo-img">
+      <span class="nav-name">FarmConnect</span>
+    </a>
+
+    <!-- Center Section: Search Engine -->
+    <div class="nav-search-container">
+      <form class="nav-search-form" action="search-results.html" method="GET">
+        <input type="text" name="query" placeholder="Search For Text" class="search-input">
+        <button type="submit" class="search-submit-btn">
+          <img src="/icons/search.svg" alt="Search" class="search-img-icon">
+        </button>
+      </form>
+    </div>
+
+   
+    <div class="nav-actions">
+      <a href="/cart" class="nav-icon-link">
+    
+        <img src="/icons/shopping cart.svg" alt="Cart" class="nav-icon">
+      </a>
+      <a href="/profile" class="nav-icon-link">
+        <img src="/icons/user.svg" alt="Profile" class="nav-icon">
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main class="product-viewport-container">
+  
+  <!-- LEFT COLUMN: HIGH-RES PRODUCT PHOTO CARD -->
+  <div class="product-media-gallery">
+  
+    <div class="product-breadcrumb">
+      <a href="/pages/home.html">Home</a> &gt;&gt; <a href="#">Grains</a> &gt;&gt;  <span class="current-item">Name Of Product</span>
+    </div>
+    
+    <!-- Main Full-Bleed Image Frame Container -->
+    <div class="main-display-photo-box">
+      <!-- Drop the image of your fresh Rice basket graphic asset here -->
+      <img src="/images/rice.svg" alt="Premium Quality Rice" class="gallery-primary-img">
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN: ITEM SPECIFICATIONS METADATA PANEL -->
+  <div class="product-specs-sidebar">
+    <!-- Online status badge matching Figma green label highlights -->
+    <div class="specs-status-header">
+      <span class="status-badge-online">Grains</span>
+      <span class="return-policy-label"><i class="fa-solid fa-rotate-left"></i> 7 Days Return Policy</span>
+    </div>
+
+    <!-- Title and Core Value Price Stream -->
+    <h1 class="specs-product-title">Rice</h1>
+        <span class="old-price">₦3,000</span>
+    <div class="specs-price-value">₦90,000</div>
+     
+    <p class="specs-short-description">Premium Quality Rice - Fresh, Clean & Delicious</p>
+
+    <!-- Quantity Modifier Control Engine -->
+    <div class="specs-interactive-actions-row">
+      <div class="qty-adjustment-module">
+        <span class="qty-label-text">Qty</span>
+        <div class="qty-counter-input">
+          <button class="qty-btn-minus" aria-label="Decrease quantity">-</button>
+          <span class="qty-numerical-display">1</span>
+          <button class="qty-btn-plus" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+
+       <button class="buy-now-submit-btn">Buy Now</button>
+    </div>
+  </div>
+
+</main>
+
+</body>
+</html>

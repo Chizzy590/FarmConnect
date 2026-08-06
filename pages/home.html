@@ -18,7 +18,6 @@
     
     <!-- Left Section: Logo & Name -->
     <a href="/pages/home.html" class="nav-logo">
-      <!-- Added class="logo-img" so we can size it using our CSS tokens -->
       <img src="/icons/logo.svg" alt="Logo" class="logo-img">
       <span class="nav-name">FarmConnect</span>
     </a>
@@ -95,17 +94,16 @@
 </main>
 
 <section class="products-section">
-  <!-- Section Header with Title and "See All" Link -->
+
   <div class="section-header">
     <h2 class="section-title">Featured Products</h2>
-    <a href="products.html" class="see-all-link">See All</a>
+    <a href="product.html" class="see-all-link">See All</a>
   </div>
    
     <img src="/icons/Bars.svg" class="slider-indicator">
-  <!-- Products Grid Matrix Container -->
+
  <div class="products-grid">
     
-    <!-- Card 1: Fresh Carrots -->
     <div class="product-card">
       <div class="card-img-wrapper">
         <img src="/images/carrots.svg" alt="Fresh Carrots" class="product-img">
@@ -123,7 +121,6 @@
       </div>
     </div>
 
-    <!-- Card 2: Corn -->
     <div class="product-card">
       <div class="card-img-wrapper">
         <img src="/images/corn.svg" alt="Corn" class="product-img">
@@ -142,7 +139,7 @@
       </div>
     </div>
 
-    <!-- Card 3: Pineapple -->
+
     <div class="product-card">
       <div class="card-img-wrapper">
         <img src="/images/pineapple.svg" alt="Pineapple" class="product-img">
@@ -161,7 +158,7 @@
       </div>
     </div>
 
-    <!-- Card 4: Beans -->
+ 
     <div class="product-card">
       <div class="card-img-wrapper">
         <img src="/images/beans.svg" alt="Beans" class="product-img">
@@ -193,7 +190,7 @@
     <img src="/icons/Bars.svg" class="slider-indicator">
   <div class="categories-image-grid">
     
-    <!-- Category Card 1: Corn -->
+    
     <div class="category-image-card">
       <img src="/images/corn.svg" alt="Corn Category" class="cat-grid-img">
       <div class="category-card-overlay">
@@ -202,7 +199,7 @@
       </div>
     </div>
 
-    <!-- Category Card 2: Rice -->
+
     <div class="category-image-card">
       <img src="/images/rice.svg" alt="Rice Category" class="cat-grid-img">
       <div class="category-card-overlay">
@@ -211,9 +208,9 @@
       </div>
     </div>
 
-    <!-- Category Card 3: Beans -->
+
     <div class="category-image-card">
-      <img src="/images/millet.svg" alt="Beans Category" class="cat-grid-img">
+      <img src="/images/millet.svg" alt="Millet Category" class="cat-grid-img">
       <div class="category-card-overlay">
         <h3 class="cat-card-name">Millet</h3>
         <p class="cat-card-sub">58 Produce</p>
@@ -224,10 +221,9 @@
  </section>
 
  <section class="flash-sale-section">
-  <!-- The main box that loads your pre-made background picture -->
+   
   <div class="sale-banner-image-box">
     
-    <!-- This container pushes and aligns all text to the right side -->
     <div class="sale-content-right">
       <span class="sale-tagline">FARMCONNECT BIGGEST SLASH SALES</span>
       <h2 class="sale-main-heading">20% Discount</h2>
@@ -239,7 +235,7 @@
 </section>
 
 <section class="recent-products-section">
-  <!-- Component Title Header -->
+  
   <div class="recent-header">
     <h2 class="recent-main-title">Recent Products</h2>
   </div>
@@ -407,17 +403,17 @@
 <footer class="site-footer">
   <div class="footer-container">
     
-    <!-- Column 1: Stay In Touch & Newsletter -->
+    
     <div class="footer-col newsletter-col">
       <h4 class="footer-heading">Stay In Touch</h4>
       
       <form class="footer-form" action="/subscribe" method="POST">
-        <!-- Replaced standard input styling parameters to track your exact mockup border outline -->
+       
         <input type="email" placeholder="Enter Email Address" required class="footer-input">
         <button type="submit" class="btn-green">Subscribe</button>
       </form>
 
-      <!-- The exact prominent display brand tagline on your Figma mockup canvas -->
+    
       <h3 class="footer-moto-text">
         We believe in <br>
         <span>change from <br>
@@ -425,19 +421,18 @@
       </h3>
     </div>
 
-    <!-- Column 2: Contact Details -->
+   
     <div class="footer-col">
       <h4 class="footer-heading">Contact Us</h4>
-      <!-- Placed the exact phone number and street address strings from your mockup screen layout -->
       <p class="footer-contact-info">(+234) 080 774 5514</p>
       <p class="footer-contact-info">8735, Achala Layout, Nnewi, Lagos.</p>
     </div>
 
-    <!-- Column 3: Follow Channels & Big Vector Branding Sprout -->
+   
     <div class="footer-col layout-branding-right-col">
       <h4 class="footer-heading">Follow Us</h4>
       
-      <!-- Horizontal Social Interface Core Links -->
+     
       <div class="social-icons">
         <a href="#" aria-label="Facebook Link"><i class="fa-brands fa-facebook"></i></a>
         <a href="#" aria-label="Instagram Link"><i class="fa-brands fa-instagram"></i></a>
@@ -445,11 +440,10 @@
         <a href="#" aria-label="LinkedIn Link"><i class="fa-brands fa-linkedin"></i></a>
       </div>
 
-      <!-- Live raw template placeholder string matching your mockup layout specifications -->
+    
       <p class="footer-email-link">farmconnect420@personal.com</p>
 
-      <!-- The beautiful signature brand sprout logo tracking directly over the right wall block -->
-      <!-- Replace the source file path below with your exported green sprout graphic shape! -->
+     
       <div class="footer-branding-logo">
         <img src="/images/Leaf.svg" alt="FarmConnect Sprout Graphics Logo" class="footer-sprout-img">
       </div>
@@ -457,7 +451,7 @@
 
   </div>
 
-  <!-- Bottom Floor Track Layout containing all secondary horizontal legal strings inline -->
+  
   <div class="footer-bottom-bar">
     <div class="footer-legal-links">
       <a href="#">Privacy Policy</a>
@@ -469,5 +463,25 @@
     </div>
   </div>
 </footer>
+<script>
+  
+  const scrollObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      
+      if (entry.isIntersecting) {
+   
+        entry.target.classList.add('is-visible');
+       
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, {
+    threshold: 0.1 
+  });
+
+  document.querySelectorAll('.product-card, .recent-product-card, .category-section, .flash-sale-section').forEach(card => {
+    scrollObserver.observe(card);
+  });
+</script>
 </body>
 </html> 

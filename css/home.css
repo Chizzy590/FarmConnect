@@ -47,7 +47,19 @@ body{
         color: var(--text);
         background: var(--white);
         overflow-x:hidden;
+       -webkit-font-smoothing: antialiased;
+    animation: globalPageFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
     }
+    @keyframes globalPageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px); /* Offsets the whole viewport slightly down to glide upward */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Settles cleanly into perfect resolution alignment */
+    }
+}
 
    
 .navbar-header {
@@ -219,8 +231,8 @@ body{
 
 
 .hero-banner-container {
-    background-color: var(--secondary); /* Exact soft pastel mint green background from your image */
-    border-radius: var(--radius-lg); /* Smooth 20px corners */
+    background-color: var(--secondary); 
+    border-radius: var(--radius-lg); 
     min-height: 420px;
     display: flex;
     text-align: left;
@@ -228,7 +240,7 @@ body{
     justify-content: space-between;
     padding: var(--space-5) 8%;
     position: relative;
-    overflow: hidden; /* Keeps the white background circles clipped inside */
+    overflow: hidden; 
 }
 
 .hero-banner-container::before {
@@ -238,7 +250,7 @@ body{
     right: -120px;
     width: 300px;
     height: 300px;
-    border: 30px solid var(--white); /* Semitransparent white thick ring */
+    border: 30px solid var(--white); 
     border-radius: 50%;
     z-index: 1;
 }
@@ -246,13 +258,13 @@ body{
 
 .hero-content {
     max-width: 55%;
-    z-index: 2; /* Keeps text above the decorative circles */
+    z-index: 2; 
     position: relative;
 }
 
 .hero-main-title {
     font-family: var(--font-family);
-    font-size: var(--fs-2xl); /* Heavy display title scale from your image */
+    font-size: var(--fs-2xl);  
     font-weight: var(--fw-bold);
     color: var(--text); 
     line-height: 1.2;
@@ -262,7 +274,7 @@ body{
 
 .hero-subtext {
     font-size: var(--fs-sm);
-    color: var(--text); /* Soft charcoal gray description text */
+    color: var(--text); 
     line-height: 1.8;
     max-width: 480px;
     margin-bottom: var(--space-5);
@@ -270,24 +282,24 @@ body{
 
 
 .get-started-btn {
-    background-color: var(--primary); /* Vibrant bright green from your image */
+    background-color: var(--primary); 
     color: var(--white);
     font-size: var(--fs-sm);
     font-weight: var(--fw-semibold);
     padding: 14px 36px;
     border: none;
-    border-radius: var(--radius-lg); /* Fully pill-rounded corners */
+    border-radius: var(--radius-lg); 
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 128, 0, 0.15);
     transition: var(--transition);
 }
 
 .get-started-btn:hover {
-    background-color: var(--primary-hover); /* Darker green hover effect */
+    background-color: var(--primary-hover); 
     transform: translateY(-1px);
 }
 
-/* SOLID DASH INDICATORS TRACK (BOTTOM LEFT) */
+
 .slider-indicators {
     display: flex;
     gap: 8px;
@@ -295,15 +307,15 @@ body{
 }
 
 .slider-indicators .dot {
-    width: 45px; /* Rectangular dashes like your image */
+    width: 45px;
     height: 6px;
-    background-color: var(--gray); /* Muted gray-green for inactive dashes */
+    background-color: var(--gray); 
     border-radius: 3px;
     transition: var(--transition);
 }
 
 .slider-indicators .dot.active {
-    background-color: var(--primary); /* Active dash matches button green */
+    background-color: var(--primary); 
 }
 
 .hero-image-wrapper {
@@ -318,7 +330,7 @@ body{
 }
 
 .hero-cow-graphic {
-    height: 100%; /* Spans full height of banner */
+    height: 100%;
     width: auto;
     object-fit: contain;
 }
@@ -331,9 +343,6 @@ body{
     .main-container { grid-template-columns: 1fr; }
 }
 
-/* ==========================================
-   CAROUSEL SLIDER BUTTON ARROWS
-   ========================================== */
 /*.slider-arrow {
     position: absolute;
     top: 50%;
@@ -399,8 +408,8 @@ body{
 .products-grid {
     cursor: pointer;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 identical side-by-side columns */
-    gap: var(--space-5);                  /* Perfect gap between layout tiles */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: var(--space-5);                 
 }
 
 /* Card Block Outer Borders Setup */
@@ -431,7 +440,7 @@ body{
 .product-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Crops vegetables to fill out images boundary masks */
+    object-fit: cover; 
 }
 
 
@@ -445,7 +454,7 @@ body{
 
 .product-category {
     font-size: var(--fs-xs);
-    color: var(--primary); /* Small green category tracking labels */
+    color: var(--primary);
     font-weight: var(--fw-medium);
 }
 
@@ -487,14 +496,14 @@ body{
 
 
 .add-to-cart-btn {
-    background-color: var(--primary); /* Bright brand green */
+    background-color: var(--primary); 
     color: var(--white);
     border: none;
     font-family: var(--font-family);
     font-size: var(--fs-xs);
     font-weight: var(--fw-semibold);
     padding: 8px 18px;
-    border-radius: var(--radius-sm);  /* Snaps to sharp 8px corner values */
+    border-radius: var(--radius-sm);  
     cursor: pointer;
     transition: var(--transition);
 }
@@ -503,7 +512,7 @@ body{
     background-color: var(--primary-hover);
 }
 
-/* Responsive constraints adjustments */
+
 @media (max-width: 992px) {
     .products-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -546,8 +555,7 @@ body{
 }
 
 .top-categories-section {
-    max-width: var(--container-width); /* Stays within your 1200px layout limits */
-    margin: 50px auto;
+    max-width: var(--container-width);
     padding: 0 var(--space-4);
 }
 
@@ -557,7 +565,7 @@ body{
 
 .categories-main-title {
     font-family: var(--font-family);
-    font-size: var(--fs-md);          /* Crisp, standard section heading font size */
+    font-size: var(--fs-md);      
     font-weight: var(--fw-bold);
     color: var(--black);
 }
@@ -565,9 +573,8 @@ body{
 
 .categories-image-grid {
     display: grid;
-    /* Forces exactly 3 columns side-by-side filling up the empty space evenly */
     grid-template-columns: repeat(3, 1fr); 
-    gap: var(--space-5); /* Employs your system spacing layout tokens */
+    gap: var(--space-5); 
 }
 
 .category-image-card {
@@ -587,7 +594,7 @@ body{
 .cat-grid-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Keeps images scaled beautifully without squishing or stretching */
+    object-fit: cover;
 }
 
 
@@ -602,13 +609,14 @@ body{
     z-index: 2;
 }
 
-/* The label font properties */
+
 .cat-card-name {
     font-family: var(--font-family);
-    font-size: var(--fs-sm); /* Keep it light and elegant matching mockup scales */
+    font-size: var(--fs-sm);
     font-weight: var(--fw-medium);
-    color: var(--white); /* White text color tracks flawlessly over image gradient layers */
+    color: var(--white); 
 }
+
 .cat-card-sub{
     font-family: var(--font-family);
     font-size: var(--fs-sm); 
@@ -617,18 +625,16 @@ body{
     margin-top: var(--space-4);
 }
 
-/* Responsive collapse for tablets and mobile devices */
+
 @media (max-width: 768px) {
     .categories-image-grid {
-        grid-template-columns: 1fr; /* Stacks image boxes vertically on narrow displays */
+        grid-template-columns: 1fr; 
     }
     .category-image-card {
-        height: 250px; /* Slims vertical height profile scale on tiny phones */
+        height: 250px; 
     }
 }
- /* ==========================================================================
-   FLASH SALE POSITIONING SYSTEM (LIVE TEXT OVER PRE-MADE IMAGE)
-   ========================================================================== */
+ 
 .flash-sale-section {
     margin: 55px auto;  
     padding-top: var(--space-5);
@@ -638,29 +644,26 @@ body{
 .sale-banner-image-box {
     width: 100%;
     height: 320px;                    
-    
-    /* LINK YOUR RECENT EXPORTED BACKGROUND IMAGE HERE */
     background-image: url('/images/Banner\ Ads.svg'); 
-    background-size: cover;            /* Forces background to cleanly fill the entire container */
-    background-position: center;       /* Centers the background graphics layout */
+    background-size: cover;          
+    background-position: center;       
     background-repeat: no-repeat;
-    
-    border-radius: var(--radius-md);   /* Smooth 12px corners matching your design tokens */
+    border-radius: var(--radius-md); 
     box-shadow: var(--shadow-sm);
     
-    /* THE MAGIC HOOK: Uses Flexbox to float all text inside to the right-hand wall */
+    /* for the text*/
     display: flex;
-    justify-content: flex-end;         /* Pushes the content compartment completely to the right */
-    align-items: center;               /* Perfectly centers your text vertically (top to bottom) */
+    justify-content: flex-end;
+    align-items: center;               
 }
 
 
 .sale-content-right {
-    width: 55%;                        /* Limits box width so text stays strictly on the right half */
-    padding: var(--space-5) 6% var(--space-5) 0; /* Generous right side padding offset padding */
+    width: 55%;                       
+    padding: var(--space-5) 6% var(--space-5) 0; 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;           /* Left-aligns your sentences natively */
+    align-items: flex-start;           
 }
 
 .sale-tagline {
@@ -673,8 +676,8 @@ body{
 
 .sale-main-heading {
     font-family: var(--font-family);
-    font-size: var(--fs-3xl);           /* Bold display text scale matching Figma (3rem) */
-    font-weight: var(--fw-black);        /* Extra heavy line thickness */
+    font-size: var(--fs-3xl);           
+    font-weight: var(--fw-black);       
     color: var(--black);
     line-height: 1.1;
     letter-spacing: -1px;
@@ -688,16 +691,16 @@ body{
     margin-bottom: var(--space-5);
 }
 
-/* Bright Green CTA Action Button Layout */
+
 .sale-action-btn {
-    background-color: var(--primary);    /* Bright signature green branding token (#008000) */
+    background-color: var(--primary);   
     color: var(--white);
     font-family: var(--font-family);
     font-size: var(--fs-xs);
     font-weight: var(--fw-semibold);
     padding: 12px 28px;
     border: none;
-    border-radius: var(--radius-lg);     /* Smooth round pill button curve (20px) */
+    border-radius: var(--radius-lg);    
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 128, 0, 0.15);
     transition: var(--transition);
@@ -708,25 +711,25 @@ body{
     transform: translateY(-1px);
 }
 
-/* Responsive adjustment for tablets and small smartphones */
+
 @media (max-width: 768px) {
     .sale-banner-image-box {
         height: auto;
-        background-image: none;        /* Removes background on mobile if text overrides layout */
-        background-color: #f6faf6;     /* Fallback pastel background */
+        background-image: none;       
+        background-color: #f6faf6;     
         padding: var(--space-5);
     }
     .sale-content-right {
         width: 100%;
         padding: 0;
-        align-items: center;           /* Center aligns everything on small mobile screens */
+        align-items: center;        
         text-align: center;
     }
 }
 
 
 .recent-products-section {
-    max-width: var(--container-width); /* Restricts bounds to 1200px spacing width */
+    max-width: var(--container-width);
     margin: 50px auto;
     padding: 0 var(--space-4);
     cursor: pointer;
@@ -743,10 +746,6 @@ body{
     color: var(--black);
 }
 
-
-
-
-  
 .recent-products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
@@ -754,8 +753,8 @@ body{
 }
 
 .recent-product-card {
-    border-radius: var(--radius-md); /* Smooth 12px curves token */
-    overflow: hidden;                 /* Clips background image bleed limits cleanly */
+    border-radius: var(--radius-md); 
+    overflow: hidden;                 
     box-shadow: var(--shadow-sm);
     background-color: var(--white);
     transition: var(--transition);
@@ -765,23 +764,37 @@ body{
 }
 
 .recent-product-card:hover {
-    transform: translateY(-4px);      /* Interactive hover feedback rise translation */
+    transform: translateY(-4px);      
 }
 
 .features-banner-image-box{                  
     width: 100%;
     height: 200px;                    
     background-image: url('/images/features-banner.svg'); 
-    background-size: contain;            /* Forces background to cleanly fill the entire container */
-    background-position: center;       /* Centers the background graphics layout */
+    background-size: contain;          
+    background-position: center;     
     background-repeat: no-repeat;
     
-    border-radius: var(--radius-md);   /* Smooth 12px corners matching your design tokens */
+    border-radius: var(--radius-md); 
     box-shadow: var(--shadow-sm);
 }
 
+.product-card, .recent-product-card, .category-section, .flash-sale-section{
+    opacity: 0;
+    transform: translateY(40px); 
+    transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    will-change: opacity, transform;
+}
+
+.product-card.is-visible, .recent-product-card.is-visible, .category-section.is-visible, .flash-sale-section.is-visible, .product-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .site-footer {
-    background-color: #0b0c10; /* Pure deep charcoal black background from mockup graphics canvas */
+    background-color: var(--black);
     color: var(--white);
     padding: 70px 0 30px 0;
     margin-top: -90px;
@@ -818,7 +831,7 @@ body{
 .footer-form {
     display: flex;
     align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft muted gray boundary lines */
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--radius-sm);
     background-color: rgba(255, 255, 255, 0.03);
     overflow: hidden;
@@ -841,7 +854,7 @@ body{
 }
 
 .btn-green {
-    background-color: var(--primary); /* Bright theme green token (#008000) */
+    background-color: var(--primary);
     color: var(--white);
     border: none;
     padding: 12px 24px;
@@ -855,7 +868,7 @@ body{
     background-color: var(--primary-hover);
 }
 
-/* The exact, heavy title tagline fonts visible in your Figma canvas block */
+
 .footer-moto-text {
     font-size: 22px;
     font-weight: var(--fw-bold);
@@ -866,13 +879,13 @@ body{
 }
 
 .footer-moto-text span {
-    color: #4cd137; /* Pops the lower sentence block parameters into bright neon vegetation green! */
+    color: #4cd137; 
 }
 
 
 .footer-contact-info, .footer-email-link {
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.7); /* Clean readable opacity font text rules */
+    color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
 }
 
@@ -928,7 +941,7 @@ body{
 }
 
 .footer-legal-links a {
-    color: rgba(255, 255, 255, 0.5); /* Soft background contrast values */
+    color: rgba(255, 255, 255, 0.5);  
     text-decoration: none;
     font-size: 11px;
     transition: var(--transition);
@@ -946,13 +959,15 @@ body{
     color: var(--white);
 }
 
-/* Tablet columns reduction breakpoints tracks fallback profiles */
+
 @media (max-width: 992px) {
     .footer-container {
-        grid-template-columns: 1fr; /* Stacks column sections into one single timeline on smaller devices */
+        grid-template-columns: 1fr; 
         gap: 40px;
     }
     .footer-bottom-bar {
         margin-top: 40px;
     }
 }
+
+
