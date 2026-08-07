@@ -1,5 +1,3 @@
-
-
 const editBtn = document.querySelector(".edit-btn");
 
 editBtn.addEventListener("click", () => {
