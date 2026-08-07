@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+    <header class="navbar-header">
+  <nav class="navbar">
+    
+    <!-- Left Section: Logo & Name -->
+    <a href="/pages/home.html" class="nav-logo">
+      
+      <img src="/icons/logo.svg" alt="Logo" class="logo-img">
+      <span class="nav-name">FarmConnect</span>
+    </a>
+
+    <!-- Center Section: Search Engine -->
+    <div class="nav-search-container">
+      <form class="nav-search-form" action="search-results.html" method="GET">
+        <input type="text" name="query" placeholder="Search For Text" class="search-input">
+        <button type="submit" class="search-submit-btn">
+          <img src="/icons/search.svg" alt="Search" class="search-img-icon">
+        </button>
+      </form>
+    </div>
+
+   
+    <div class="nav-actions">
+      <a href="/cart" class="nav-icon-link">
+    
+        <img src="/icons/shopping cart.svg" alt="Cart" class="nav-icon">
+      </a>
+      <a href="/profile" class="nav-icon-link">
+        <img src="/icons/user.svg" alt="Profile" class="nav-icon">
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main class="product-viewport-container">
+  
+  <!-- LEFT COLUMN: HIGH-RES PRODUCT PHOTO CARD -->
+  <div class="product-media-gallery">
+  
+    <div class="product-breadcrumb">
+      <a href="/pages/home.html">Home</a> &gt;&gt; <a href="#">Grains</a> &gt;&gt;  <span class="current-item">Name Of Product</span>
+    </div>
+    
+    <!-- Main Full-Bleed Image Frame Container -->
+    <div class="main-display-photo-box">
+      <!-- Drop the image of your fresh Rice basket graphic asset here -->
+      <img src="/images/rice.svg" alt="Premium Quality Rice" class="gallery-primary-img">
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN: ITEM SPECIFICATIONS METADATA PANEL -->
+  <div class="product-specs-sidebar">
+    <!-- Online status badge matching Figma green label highlights -->
+    <div class="specs-status-header">
+      <span class="status-badge-online">Grains</span>
+      <span class="return-policy-label"><i class="fa-solid fa-rotate-left"></i> 7 Days Return Policy</span>
+    </div>
+
+    <!-- Title and Core Value Price Stream -->
+    <h1 class="specs-product-title">Rice</h1>
+        <span class="old-price">₦3,000</span>
+    <div class="specs-price-value">₦90,000</div>
+     
+    <p class="specs-short-description">Premium Quality Rice - Fresh, Clean & Delicious</p>
+
+    <!-- Quantity Modifier Control Engine -->
+    <div class="specs-interactive-actions-row">
+      <div class="qty-adjustment-module">
+        <span class="qty-label-text">Qty</span>
+        <div class="qty-counter-input">
+          <button class="qty-btn-minus" aria-label="Decrease quantity">-</button>
+          <span class="qty-numerical-display">1</span>
+          <button class="qty-btn-plus" aria-label="Increase quantity">+</button>
+        </div>
+      </div>
+
+       <button class="buy-now-submit-btn">Buy Now</button>
+    </div>
+  </div>
+</main>
+    <section class="tabs-display-section">
+  
+  <!-- Tabs Navigation Header Track -->
+  <div class="tabs-nav-bar">
+    <button class="tab-toggle-btn">Description</button>
+    <button class="tab-toggle-btn active">Reviews</button>
+  </div>
+
+  <!-- Content Card Block -->
+  <div class="tabs-content-card">
+    
+    <!-- LEFT SIDE: SYSTEM RATING RATIOS -->
+    <div class="reviews-ratings-panel">
+      <div class="average-score-box">
+        <h3 class="rating-huge-score">4.5</h3>
+        <p class="rating-meta-subtitle">Average Ratings</p>
+      </div>
+
+      <!-- Feed Item 1: Paul Felix -->
+      <div class="user-review-row">
+        <div class="review-stars-row">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h4 class="reviewer-name">Paul Felix</h4>
+        <p class="reviewer-copy-text">Lorem ipsum dolor sit amet consectetur. A turpis eu sit venenatis eget aenean turpis ut justo.</p>
+      </div>
+
+      <!-- Feed Item 2: John Doe -->
+      <div class="user-review-row">
+        <div class="review-stars-row">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h4 class="reviewer-name">John Doe</h4>
+        <p class="reviewer-copy-text">Lorem ipsum dolor sit amet consectetur. A turpis eu sit venenatis eget aenean turpis ut justo.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: INTERACTIVE REVIEW ENTRY FORM -->
+    <form class="review-entry-form" action="/submit-review" method="POST">
+<div class="rating-picker-module">
+  <span class="rating-input-label">Your Rating</span>
+  
+  <!-- The clickable stars -->
+  <div class="interactive-stars-row" id="star-picker">
+    <i class="fa-regular fa-star" data-value="1"></i>
+    <i class="fa-regular fa-star" data-value="2"></i>
+    <i class="fa-regular fa-star" data-value="3"></i>
+    <i class="fa-regular fa-star" data-value="4"></i>
+    <i class="fa-regular fa-star" data-value="5"></i>
+  </div>
+
+  <input type="hidden" name="rating" id="selected-rating-value" value="0">
+</div>
+
+      <!-- Compact Two-Column Input Inputs -->
+      <div class="form-inputs-row">
+        <input type="text" placeholder="Name" required class="review-text-input">
+        <input type="email" placeholder="Email" required class="review-text-input">
+      </div>
+
+      <textarea placeholder="Your Review" required class="review-textarea-field" rows="5"></textarea>
+
+      <button type="submit" class="submit-review-action-btn">Submit Review</button>
+    </form>
+
+  </div>
+</section>
+
+<section class="products-section">
+
+  <div class="section-header">
+    <h2 class="section-title">Related Products</h2>
+  </div>
+   
+    <img src="/icons/Bars.svg" class="slider-indicator">
+
+ <div class="products-grid">
+    
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/carrots.svg" alt="Fresh Carrots" class="product-img">
+             </div>
+      <div class="card-info">
+        <span class="product-category">Vegetables</span>
+        <h3 class="product-name">Fresh Carrots</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price2">₦2,000</span>
+            <span class="current-price">₦1,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/corn.svg" alt="Corn" class="product-img">
+       
+      </div>
+      <div class="card-info">
+        <span class="product-category">Grains</span>
+        <h3 class="product-name">Corn</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price2">₦2,500</span>
+            <span class="current-price">₦2,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/pineapple.svg" alt="Pineapple" class="product-img">
+        
+      </div>
+      <div class="card-info">
+        <span class="product-category">Fruits</span>
+        <h3 class="product-name">Pineapple</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price2">₦3,500</span>
+            <span class="current-price">₦3,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+ 
+    <div class="product-card">
+      <div class="card-img-wrapper">
+        <img src="/images/beans.svg" alt="Beans" class="product-img">
+      
+      </div>
+      <div class="card-info">
+        <span class="product-category">Legumes</span>
+        <h3 class="product-name">Beans</h3>
+        <div class="card-bottom-row">
+          <p class="product-price">
+            <span class="old-price2">₦10,000</span>
+            <span class="current-price">₦9,000</span>
+          </p>
+          <button class="add-to-cart-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+</div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    
+    <div class="footer-col newsletter-col">
+      <h4 class="footer-heading">Stay In Touch</h4>
+      
+      <form class="footer-form" action="/subscribe" method="POST">
+       
+        <input type="email" placeholder="Enter Email Address" required class="footer-input">
+        <button type="submit" class="btn-green">Subscribe</button>
+      </form>
+
+    
+      <h3 class="footer-moto-text">
+        We believe in <br>
+        <span>change from <br>
+        the ground up</span>
+      </h3>
+    </div>
+
+   
+    <div class="footer-col">
+      <h4 class="footer-heading">Contact Us</h4>
+      <p class="footer-contact-info">(+234) 080 774 5514</p>
+      <p class="footer-contact-info">8735, Achala Layout, Nnewi, Lagos.</p>
+    </div>
+
+   
+    <div class="footer-col layout-branding-right-col">
+      <h4 class="footer-heading">Follow Us</h4>
+      
+     
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook Link"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram Link"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter Link"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn Link"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+
+    
+      <p class="footer-email-link">farmconnect420@personal.com</p>
+
+     
+      <div class="footer-branding-logo">
+        <img src="/images/Leaf.svg" alt="FarmConnect Sprout Graphics Logo" class="footer-sprout-img">
+      </div>
+    </div>
+
+  </div>
+
+  
+  <div class="footer-bottom-bar">
+    <div class="footer-legal-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Policy Cookies</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Financial Plan</a>
+    </div>
+  </div>
+</footer>
+<script>
+  
+  const scrollObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      
+      if (entry.isIntersecting) {
+   
+        entry.target.classList.add('is-visible');
+       
+        observer.unobserve(entry.target); 
+      }
+    });
+  }, {
+    threshold: 0.1 
+  });
+
+  document.querySelectorAll('.product-card, .tabs-display-section, .products-section').forEach(card => {
+    scrollObserver.observe(card);
+  });
+
+ 
+  const minusBtn = document.querySelector('.qty-btn-minus');
+  const plusBtn = document.querySelector('.qty-btn-plus');
+  const qtyDisplay = document.querySelector('.qty-numerical-display');
+
+ 
+  plusBtn.addEventListener('click', () => {
+     let currentQty = parseInt(qtyDisplay.innerText);
+    
+    
+    currentQty += 1;
+    
+   
+    qtyDisplay.innerText = currentQty;
+  });
+
+  minusBtn.addEventListener('click', () => {
+    let currentQty = parseInt(qtyDisplay.innerText);
+    
+    
+    if (currentQty > 1) {
+      currentQty -= 1;
+      qtyDisplay.innerText = currentQty;
+    }
+  });
+
+
+ 
+  const starContainer = document.getElementById('star-picker');
+  const stars = starContainer.querySelectorAll('i');
+  const hiddenRatingInput = document.getElementById('selected-rating-value');
+
+ 
+  starContainer.addEventListener('click', (e) => {
+   
+    const clickedStar = e.target.closest('i');
+    if (!clickedStar) return;
+
+    
+    const ratingValue = parseInt(clickedStar.getAttribute('data-price') || clickedStar.getAttribute('data-value'));
+
+   
+    hiddenRatingInput.value = ratingValue;
+
+   
+    stars.forEach(star => {
+      const currentStarValue = parseInt(star.getAttribute('data-value'));
+
+      if (currentStarValue <= ratingValue) {
+      
+        star.classList.remove('fa-regular');
+        star.classList.add('fa-solid');
+      } else {
+        // Keep the remaining stars empty outlines
+        star.classList.remove('fa-solid');
+        star.classList.add('fa-regular');
+      }
+    });
+  });
+
+  stars.forEach(star => {
+    star.addEventListener('mouseenter', (e) => {
+      const hoverValue = parseInt(e.target.getAttribute('data-value'));
+      stars.forEach(s => {
+        const sValue = parseInt(s.getAttribute('data-value'));
+        if (sValue <= hoverValue) {
+          s.style.transform = 'scale(1.2)';
+        }
+      });
+    });
+
+    star.addEventListener('mouseleave', () => {
+      stars.forEach(s => s.style.transform = 'scale(1)');
+    });
+  });
+</script>
+</body>
+</html>
