@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FarmConnect</title>
+
+    <link rel="stylesheet" href="search_page.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+</head>
+
+<body>
+
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-leaf"></i>
+
+<h2>FarmConnect</h2>
+
+</div>
+
+<div class="search-box">
+
+<input type="text" id="searchInput" placeholder="Search For Text">
+
+<i class="fas fa-search"></i>
+
+</div>
+
+<div class="nav-icons">
+
+<i class="fas fa-cart-shopping"></i>
+
+<i class="fas fa-user"></i>
+
+</div>
+
+</nav>
+
+</header>
+
+
+
+
+<div class="container">
+
+
+
+<aside class="sidebar">
+
+<div class="filter-box">
+
+<h3>Categories</h3>
+
+<label><input type="checkbox"> Grains</label>
+
+<label><input type="checkbox"> Legume</label>
+
+<label><input type="checkbox"> Millet</label>
+
+<label><input type="checkbox"> Vegetables</label>
+
+<label><input type="checkbox"> Plant</label>
+
+<label><input type="checkbox"> Proteins</label>
+
+<label><input type="checkbox"> Fruits</label>
+
+<label><input type="checkbox"> Cereals</label>
+
+</div>
+
+
+<div class="filter-box">
+
+<div class="price-title">
+
+<h3>Price</h3>
+
+<button>Apply</button>
+
+</div>
+
+<input type="range"
+min="0"
+max="100000"
+value="50000">
+
+<div class="price-range">
+
+<span>₦0</span>
+
+<span>₦100,000</span>
+
+</div>
+
+</div>
+
+</aside>
+
+
+
+
+
+<section class="products-section">
+
+<div class="top-bar">
+
+<div>
+
+<p class="breadcrumb">
+Home >
+Search
+</p>
+
+<h2>19 Results Grains</h2>
+
+</div>
+
+<select id="sortProducts">
+
+<option>Sort By</option>
+
+<option>Lowest Price</option>
+
+<option>Highest Price</option>
+
+<option>Name</option>
+
+</select>
+
+</div>
+
+<div id="productGrid" class="product-grid">
+
+
+
+</div>
+
+<div class="load-more">
+
+<button id="loadMore">
+
+Load More Products
+
+</button>
+
+</div>
+
+</section>
+
+</div>
+
+
+
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>Top Selling Products</h2>
+
+</div>
+
+<div class="product-grid"
+
+id="topSelling">
+
+</div>
+
+</section>
+
+
+
+
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>Recommended Products</h2>
+
+</div>
+
+<div class="product-grid"
+
+id="recommended">
+
+</div>
+
+</section>
+
+
+
+
+
+
+<footer>
+
+<div class="footer-container">
+
+<div class="newsletter">
+
+<h3>Stay In Touch</h3>
+
+<div class="subscribe">
+
+<input
+type="email"
+placeholder="Enter Email Address">
+
+<button>
+
+Subscribe
+
+</button>
+
+</div>
+
+<h1>
+
+We believe in
+<span>
+
+change from
+the ground up
+
+</span>
+
+</h1>
+
+</div>
+
+
+
+<div class="contact">
+
+<h3>Contact Us</h3>
+
+<p>(+234) 080 774 5614</p>
+
+<p>8735, Achala Layout,
+Nnewi, Lagos.</p>
+
+</div>
+
+
+
+<div class="social">
+
+<h3>Follow Us</h3>
+
+<div class="icons">
+
+<i class="fab fa-instagram"></i>
+
+<i class="fab fa-facebook"></i>
+
+<i class="fab fa-x-twitter"></i>
+
+<i class="fab fa-github"></i>
+
+<i class="fab fa-flickr"></i>
+
+</div>
+
+<p>
+
+farmconnect420@personal.com
+
+</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+Privacy Policy |
+
+Terms of Use |
+
+Policy Cookies |
+
+Terms of Service |
+
+Testimonials |
+
+Financial Plan
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="search_page.js"></script>
+
+</body>
+</html>

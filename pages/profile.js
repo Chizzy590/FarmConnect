@@ -1,6 +1,4 @@
-// ===============================
-// Edit Profile
-// ===============================
+
 
 const editBtn = document.querySelector(".edit-btn");
 
@@ -30,9 +28,7 @@ editBtn.addEventListener("click", () => {
 });
 
 
-// ===============================
-// Reset Password
-// ===============================
+
 
 const passwordForm = document.getElementById("passwordForm");
 
@@ -67,9 +63,7 @@ passwordForm.addEventListener("submit", function (e) {
 });
 
 
-// ===============================
-// Newsletter Subscription
-// ===============================
+
 
 const subscribeBtn =
     document.querySelector(".subscribe-box button");
@@ -107,9 +101,7 @@ subscribeBtn.addEventListener("click", () => {
 });
 
 
-// ===============================
-// Search Box
-// ===============================
+
 
 const searchInput =
     document.querySelector(".search-box input");
@@ -134,7 +126,7 @@ searchButton.addEventListener("click", () => {
 });
 
 
-// Press Enter to Search
+
 
 searchInput.addEventListener("keypress", function (e) {
 
@@ -149,9 +141,7 @@ searchInput.addEventListener("keypress", function (e) {
 });
 
 
-// ===============================
-// Cart Notification
-// ===============================
+
 
 const cartBadge = document.querySelector(".cart span");
 
@@ -164,9 +154,7 @@ document.querySelector(".cart").addEventListener("click", () => {
 });
 
 
-// ===============================
-// Smooth Hover Animation
-// ===============================
+
 
 const cards = document.querySelectorAll(".card");
 
