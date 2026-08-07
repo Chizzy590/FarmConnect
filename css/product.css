@@ -366,3 +366,553 @@ body{
         height: 300px; 
     }
 }
+
+    
+.tabs-display-section {
+    max-width: var(--container-width);
+    margin: 50px auto;
+    padding: 0 var(--space-4);
+    font-family: var(--font-family);
+}
+
+/* Horizontal top tabs selector bar */
+.tabs-nav-bar {
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-left: var(--space-5);
+    background: transparent;
+}
+
+.tab-toggle-btn {
+    background: none;
+    border: none;
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    color: #888888;                     /* Muted grey inactive status state */
+    padding: var(--space-4) var(--space-5);
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+}
+
+
+.tab-toggle-btn.active {
+    color: #e67e22;                     /* Vibrant Figma orange highlight title scale color */
+}
+
+.tab-toggle-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;                       /* Locks precisely over the baseline border axis split line */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #e67e22;          /* Custom orange selector accent tracking stroke */
+    border-radius: 2px 2px 0 0;
+}
+
+
+.tabs-content-card {
+    background-color: var(--white);
+    border-radius: 0 0 var(--radius-md) var(--radius-md); /* Smooth flush bottom integration rounding */
+    padding: 40px var(--space-5);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    gap: 8%;                            /* Balanced clear column layout distribution gap */
+}
+
+/* LEFT SIDE: FEED FEEDBACK METRICS */
+.reviews-ratings-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.average-score-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.rating-huge-score {
+    font-size: 3.2rem;                  /* Large bold numeric metric block profile scale */
+    font-weight: var(--fw-regular);
+    color: var(--black);
+    line-height: 1;
+}
+
+.rating-meta-subtitle {
+    font-size: var(--fs-xs);
+    color: #777777;
+}
+
+/* User Individual review comments items spacing entries */
+.user-review-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: var(--space-4);
+}
+
+.user-review-row:not(:last-child) {
+    border-bottom: 1px solid #f5f5f5;   /* Light dividers block tracking elements line rows */
+}
+
+/* Orange star color nodes mapping matching mockups color settings */
+.review-stars-row i, .interactive-stars-row i {
+    color: #e67e22;                     /* Connects directly to custom orange star tint vector layers */
+    font-size: 13px;
+}
+
+.reviewer-name {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    color: var(--black);
+    margin-top: 2px;
+}
+
+.reviewer-copy-text {
+    font-size: var(--fs-xs);
+    color: #666666;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* ==========================================
+   RIGHT SIDE: THE REVIEW ENTRY SUBMISSION FORM
+   ========================================== */
+.review-entry-form {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.rating-picker-module {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rating-input-label {
+    font-size: var(--fs-xs);
+    color: #555555;
+    font-weight: var(--fw-medium);
+}
+
+.interactive-stars-row {
+    display: flex;
+    gap: 4px;
+}
+
+.interactive-stars-row i {
+    font-size: 18px;                    /* Prominent star targets scale for tapping options */
+    cursor: pointer;
+}
+
+/* Two items inline input fields row wrapper elements */
+.form-inputs-row {
+    display: flex;
+    gap: var(--space-4);
+    width: 100%;
+}
+
+.review-text-input {
+    flex: 1;
+    background-color: #f5f5f5;          /* Crisp rounded grey soft shapes backdrop from Figma mockup */
+    border: none;
+    padding: 14px 20px;
+    border-radius: var(--radius-lg);    /* Pill rounded input profiles */
+    font-family: var(--font-family);
+    font-size: var(--fs-xs);
+    color: var(--text);
+    outline: none;
+}
+
+.review-textarea-field {
+    width: 100%;
+    background-color: #f5f5f5;
+    border: none;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);    /* Block rounded description input bounding wrapper mask */
+    font-family: var(--font-family);
+    font-size: var(--fs-xs);
+    color: var(--text);
+    outline: none;
+    resize: none;
+}
+
+/* Highlight entry outlines behavior definitions */
+.review-text-input:focus, .review-textarea-field:focus {
+    background-color: #edf2ed;          /* Soft focus color aura indicator hint block */
+}
+
+/* Bright green action trigger button form options node alignment */
+.submit-review-action-btn {
+    background-color: #008000;          /* Vibrant core green matching figma action elements */
+    color: var(--white);
+    border: none;
+    padding: 12px 32px;
+    font-family: var(--font-family);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    border-radius: var(--radius-lg);    /* Round pill boundary capped style masks */
+    width: fit-content;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-review-action-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+
+@media (max-width: 768px) {
+    .tabs-content-card {
+        flex-direction: column;         /* Collapses side-by-side modules into vertical streams */
+        gap: 50px;
+        padding: 30px var(--space-4);
+    }
+    .form-inputs-row {
+        flex-direction: column;         /* Stacks name and email input elements vertically on smartphones */
+    }
+}
+
+.products-section {
+    max-width: var(--container-width);
+    margin: 40px auto;
+    padding: 0 var(--space-4);
+}
+
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-4);
+}
+
+.section-title {
+    font-family: var(--font-family);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-bold);
+    color: var(--black);
+}
+
+.slider-indicator{
+    display: flex;
+    margin-top: -10px;
+    margin-bottom: var(--space-5);
+}
+
+.products-grid {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: var(--space-5);                 
+}
+
+/* Card Block Outer Borders Setup */
+.product-card {
+    background-color: var(--white);
+    border-radius: var(--radius-md);    
+    box-shadow: var(--shadow-sm);        
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-4px); 
+}
+
+
+/* Image bounding frames metrics */
+.card-img-wrapper {
+    width: 100%;
+    height: 180px;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+
+.card-info {
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.product-category {
+    font-size: var(--fs-xs);
+    color: var(--primary);
+    font-weight: var(--fw-medium);
+}
+
+.product-name {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+
+.card-bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+
+.product-price {
+    display: flex;
+    align-items: center;    
+    gap: 8px;                
+}
+
+
+.old-price2 {
+    font-size: var(--fs-xs);
+    color: var(--gray);
+    text-decoration: line-through; 
+    font-weight: var(--fw-regular);
+}
+
+.current-price {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-regular);
+    color: var(--text);
+}
+
+
+.add-to-cart-btn {
+    background-color: var(--primary); 
+    color: var(--white);
+    border: none;
+    font-family: var(--font-family);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    padding: 8px 18px;
+    border-radius: var(--radius-sm);  
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+
+@media (max-width: 992px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+    .products-grid { grid-template-columns: 1fr; }
+}
+
+.tabs-display-section, .products-section {
+    opacity: 0;
+    transform: translateY(40px); 
+    transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), 
+                transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+    will-change: opacity, transform;
+}
+
+.tabs-display-section.is-visible, .products-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.site-footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 70px 0 30px 0;
+    margin-top: 50px;
+    font-family: var(--font-family);
+    position: relative;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 50px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--space-5);
+    align-items: start;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.footer-heading {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: var(--space-4);
+    letter-spacing: 0.5px;
+}
+
+
+.footer-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-sm);
+    background-color: rgba(255, 255, 255, 0.03);
+    overflow: hidden;
+    max-width: 380px;
+    width: 100%;
+}
+
+.footer-input {
+    flex: 1;
+    background: transparent;
+    padding: 12px 16px;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: var(--fs-xs);
+}
+
+.footer-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-green {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-green:hover {
+    background-color: var(--primary-hover);
+}
+
+
+.footer-moto-text {
+    font-size: 22px;
+    font-weight: var(--fw-bold);
+    color: var(--white);
+    line-height: 1.3;
+    margin-top: 35px;
+    letter-spacing: -0.5px;
+}
+
+.footer-moto-text span {
+    color: #4cd137; 
+}
+
+
+.footer-contact-info, .footer-email-link {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.layout-branding-right-col {
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 4px;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 16px;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: var(--primary);
+    transform: translateY(-1px);
+}
+
+
+.footer-branding-logo {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer-sprout-img {
+    height: 60px; 
+    width: auto;
+    object-fit: contain;
+}
+
+
+.footer-bottom-bar {
+    max-width: var(--container-width);
+    margin: 60px auto 0 auto;
+    padding: 25px var(--space-5) 0 var(--space-5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Exact thin inline break separator stroke row */
+    text-align: left;
+}
+
+.footer-legal-links {
+    display: flex;
+    flex-direction: row;
+    gap: 12px; 
+    flex-wrap: wrap; 
+}
+
+.footer-legal-links a {
+    color: rgba(255, 255, 255, 0.5);  
+    text-decoration: none;
+    font-size: 11px;
+    transition: var(--transition);
+}
+
+
+.footer-legal-links a:not(:last-child)::after {
+    content: '|';
+    margin-left: 12px;
+    color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+}
+
+.footer-legal-links a:hover {
+    color: var(--white);
+}
+
+
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+    .footer-bottom-bar {
+        margin-top: 40px;
+    }
+}
+
+
+
