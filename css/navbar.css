@@ -1,0 +1,167 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,.03);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo img{
+    height:50px;
+    width:auto;
+    display:block;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+
+.nav-links a{
+    font-size:14px;
+    font-weight:500;
+    transition:var(--transition);
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+.nav-links a.active{
+    color:var(--primary);
+}
+.container{
+    width:min(88%,1200px);
+    margin:auto;
+}
+
+/* ==================================
+   MOBILE MENU
+================================== */
+
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    gap:6px;
+    cursor:pointer;
+    z-index:1001;
+}
+
+.menu-toggle span{
+    width:24px;
+    height:3px;
+    background:#222;
+    border-radius:10px;
+}
+
+/* ===========================
+   MOBILE NAVIGATION
+=========================== */
+
+@media (max-width:768px){
+
+    .navbar{
+        position:relative;
+    }
+
+    .menu-toggle{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:6px;
+        cursor:pointer;
+    }
+
+    .menu-toggle span{
+        width:28px;
+        height:3px;
+        background:#222;
+        border-radius:20px;
+    }
+
+    .btn-green{
+        display:none;
+    }
+
+ .nav-links{
+    position:absolute;
+    top:100%;
+    right:0;
+
+    width:220px;
+
+    flex-direction:column;
+    align-items:center;
+
+    background:#fff;
+
+    padding:20px 0;
+
+    border-radius:8px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    z-index:1000;
+    display: none;   /* VERY IMPORTANT */
+
+
+}
+
+
+    .nav-links.show{
+        display:flex;
+    }
+}
+
+/* ===========================
+   STICKY NAVBAR
+=========================== */
+
+header.sticky{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    z-index:999;
+    animation:slideDown .3s ease;
+}
+
+@keyframes slideDown{
+
+    from{
+        transform:translateY(-100%);
+    }
+
+    to{
+        transform:translateY(0);
+    }
+
+}
+
+
+ul, ol {
+    list-style: none;
+}
+

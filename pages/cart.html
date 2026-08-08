@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | FarmConnect</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/navbar.css">
+</head>
+
+<body>
+
+    <header>
+       <nav class="navbar container">
+              <!-- Logo -->
+   <a href="../index.html" class="logo">
+    <img src="../images/logo/Horizontal Logo Gree.png" alt="FarmConnect Logo">
+</a>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links">
+
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+    <!-- Get Started Button -->
+    <a href="pages/signup.html" class="btn btn-green">
+        Get Started
+    </a>
+
+    <!-- Mobile Menu -->
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</nav>
+    </header>
+
+    <main>
+
+        <section id="cart-page">
+
+            <div class="container">
+
+                <div class="breadcrumb">
+
+    <a href="../index.html">Home</a>
+
+    <span>»</span>
+
+    <a href="products.html">Category</a>
+
+    <span>»</span>
+
+    <span>Shopping Cart</span>
+
+</div>
+
+                <h1>Your Shopping Cart</h1>
+
+                <div class="cart-wrapper">
+
+                    <div class="cart-table">
+
+                        <div class="cart-header">
+
+                            <span>Item</span>
+
+                            <span>Unit Price</span>
+
+                            <span>QTY</span>
+
+                            <span>Total</span>
+
+                        </div>
+                        <div class="cart-item">
+
+    <div class="product-info">
+
+        <img src="../images/company png/maize.jpg" alt="maize">
+
+        <div>
+
+            <h3>Maize</h3>
+
+            <button class="remove-btn">
+                Remove
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="price" data-price="40000">
+    ₦40,000
+</div>
+
+<div class="quantity">
+    <button class="minus">−</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+
+<div class="total">
+    ₦40,000
+</div>
+
+</div>
+
+
+<div class="cart-item">
+
+    <div class="product-info">
+
+        <img src="../images/company png/rice...jpg" alt="rice">
+
+        <div>
+
+            <h3>Rice</h3>
+
+            <button class="remove-btn">
+                Remove
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="price" data-price="40000">
+    ₦40,000
+</div>
+
+<div class="quantity">
+    <button class="minus">−</button>
+    <span class="qty">1</span>
+    <button class="plus">+</button>
+</div>
+
+<div class="total">
+    ₦40,000
+</div>
+
+</div>
+ <!-- Empty Cart Message -->
+    <div class="empty-cart" style="display:none;">
+
+        <h2>Your cart is empty 🛒</h2>
+
+        <p>
+            Looks like you haven't added any products yet.
+        </p>
+
+        <a href="../index.html" class="btn btn-green">
+            Continue Shopping
+        </a>
+
+    </div>
+
+</div> <!-- End of cart-table -->
+
+<div class="cart-footer">
+
+    <div class="discount-box">
+
+        <input
+            type="text"
+            placeholder="Enter Discount Code">
+
+        <button class="btn btn-green">
+
+            Apply
+
+        </button>
+
+    </div>
+
+    <div class="cart-summary">
+
+        <p>
+Sub Total:
+<span class="subtotal">₦80,000</span>
+</p>
+
+        <p>
+
+            Discount:
+
+            <span>₦0</span>
+
+        </p>
+
+        <h2>
+Total:
+<span class="grand-total">₦80,000</span>
+</h2>
+        <a href="checkout.html"
+            class="btn btn-green">
+
+            Proceed To Checkout
+
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+<footer>
+
+</footer>
+<script src="../js/script.js"></script>
+</body>
+
+</html>
